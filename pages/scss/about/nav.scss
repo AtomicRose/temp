@@ -1,0 +1,106 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .aboutNav {
+        width: 100%;
+        height: 88px;
+        background: #fff;
+    }
+    .aboutNavBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 0 50px 0 50px;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                padding: 0 30px 0 30px;
+                line-height: 84px;
+                font-size: 20px;
+                &:hover {
+                    color: $primary-yellow-color;
+                }
+            }
+        }
+        .liActive {
+            color: $primary-yellow-color;
+            border-bottom: 4px solid $primary-yellow-color;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {
+    .aboutNavBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 0 50px 0 50px;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                padding: 0 50px 0 50px;
+                line-height: 84px;
+                font-size: 20px;
+            }
+        }
+        .liActive {
+            color: $primary-yellow-color;
+            border-bottom: 4px solid $primary-yellow-color;
+        }
+    }
+}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {
+    .aboutNavBox {
+        ul {
+            li {
+                padding: 0 50px 0 50px;
+                margin: 0 30px 0 30px;
+            }
+        }
+    }
+}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .aboutNav {
+        width: 100%;
+        height: px2rem(88px);
+        background: #fff;
+    }
+    .aboutNavBox {
+        width: 100%;
+        @include px2rem('padding', 0 50px 0 50px);
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                width: 25%;
+                line-height: px2rem(84px);
+                font-size: px2rem(20px);
+            }
+        }
+        .liActive {
+            color: $primary-yellow-color;
+            border-bottom: px2rem(4px) solid $primary-yellow-color;
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css

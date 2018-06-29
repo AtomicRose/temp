@@ -1,0 +1,199 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+$input-height: 56px;
+$input-height-m: 80px;
+// desktop css
+@include media('>tablet', 'screen') {
+    .inputContainer {
+        width: 100%;
+        margin-bottom: 14px;
+        .label {
+            width: 100%;
+            font-size: 20px;
+            color: #3c3c3c;
+        }
+        .flexInput {
+            margin-top: 8px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }
+        .inputBox {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+        }
+        .operateBox {
+            width: $input-height;
+            text-align: center;
+        }
+        .input {
+            width: 100%;
+            height: $input-height;
+            line-height: $input-height;
+            font-size: 20px;
+            color: #3c3c3c;
+            background: #f0f0f0;
+            border: 1px solid #c5c5c5;
+            padding: 0 16px 0 16px;
+            border-radius: 4px;
+            &:focus {
+                background: #fff;
+                border: 1px solid $primary-yellow-color;
+                outline: $primary-yellow-color;
+            }
+        }
+        .textarea {
+            width: 100%;
+            font-size: 20px;
+            color: #3c3c3c;
+            background: #f0f0f0;
+            border: 1px solid #c5c5c5;
+            padding: 0 16px 0 16px;
+            border-radius: 4px;
+            resize: none;
+            &:focus {
+                background: #fff;
+                border: 1px solid $primary-yellow-color;
+                outline: $primary-yellow-color;
+            }
+        }
+        :-moz-placeholder {
+            color: #9b9b9b;
+            font-size: 20px;
+        }
+        ::-moz-placeholder {
+            color: #9b9b9b;
+            font-size: 20px;
+        }
+        :-ms-input-placeholder {
+            color: #9b9b9b;
+            font-size: 20px;
+        }
+        ::-webkit-input-placeholder {
+            color: #9b9b9b;
+            font-size: 20px;
+        }
+        .requiredStyle {
+            color: #ed001d;
+            font-size: 20px;
+            line-height: $input-height;
+        }
+        .errorTip {
+            font-size: 14px;
+            width: 100%;
+            padding: 0 16px 0 16px;
+            overflow: hidden;
+            color: #ed001d;
+            height: 20px;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .inputContainer {
+        width: 100%;
+        margin-bottom: px2rem(10px);
+        .label {
+            width: 100%;
+            font-size: px2rem(20px);
+            color: #3c3c3c;
+        }
+        .flexInput {
+            margin-top: px2rem(8px);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }
+        .inputBox {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+        }
+        .operateBox {
+            width: px2rem($input-height-m);
+            text-align: center;
+        }
+        .input {
+            width: 100%;
+            height: px2rem($input-height-m);
+            line-height: px2rem($input-height-m);
+            font-size: px2rem(24px);
+            color: #3c3c3c;
+            background: #f0f0f0;
+            @include px2px('border', 1px solid #c5c5c5);
+            @include px2rem('padding', 0 16px 0 16px);
+            border-radius: px2rem(4px);
+            &:focus {
+                background: #fff;
+                @include px2px('border', 1px solid $primary-yellow-color);
+                outline: $primary-yellow-color;
+            }
+        }
+        .textarea {
+            width: 100%;
+            font-size: px2rem(24px);
+            color: #3c3c3c;
+            background: #f0f0f0;
+            border: 1px solid #c5c5c5;
+            @include px2rem('padding', 0 16px 0 16px);
+            border-radius: px2rem(4px);
+            resize: none;
+            &:focus {
+                background: #fff;
+                @include px2px('border', 1px solid $primary-yellow-color);
+                outline: $primary-yellow-color;
+            }
+        }
+        :-moz-placeholder {
+            color: #9b9b9b;
+            font-size: px2rem(24px);
+        }
+        ::-moz-placeholder {
+            color: #9b9b9b;
+            font-size: px2rem(24px);
+        }
+        :-ms-input-placeholder {
+            color: #9b9b9b;
+            font-size: px2rem(24px);
+        }
+        ::-webkit-input-placeholder {
+            color: #9b9b9b;
+            font-size: px2rem(24px);
+        }
+        .requiredStyle {
+            color: #ed001d;
+            font-size: px2rem(24px);
+            line-height: px2rem($input-height-m);
+        }
+        .errorTip {
+            font-size: px2rem(16px);
+            width: 100%;
+            @include px2rem('padding', 0 16px 0 16px);
+            overflow: hidden;
+            color: #ed001d;
+            height: px2rem(34px);
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css

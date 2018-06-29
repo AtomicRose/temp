@@ -1,0 +1,110 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .slider3dContainer {
+        padding-bottom: 56px;
+    }
+    .dotBox {
+        width: 100%;
+        height: 14px;
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        padding-right: 20px;
+        .dot {
+            display: inline-block;
+            width: 36px;
+            height: 12px;
+            border-radius: 8px;
+            background: #bebebe;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .dotActive {
+            background: #ffac32;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .slider3dContainer {
+        padding-bottom: px2rem(56px);
+    }
+    .dotBox {
+        width: 100%;
+        height: px2rem(20px);
+        position: absolute;
+        bottom: px2rem(20px);
+        text-align: center;
+        padding-right: px2rem(30px);
+        .dot {
+            display: inline-block;
+            width: px2rem(36px);
+            height: px2rem(18px);
+            border-radius: px2rem(8px);
+            background: #bebebe;
+            @include px2rem('margin', 0 5px);
+            cursor: pointer;
+        }
+        .dotActive {
+            background: #ffac32;
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css
+.slider3dContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul {
+        list-style: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        li {
+            list-style: none;
+        }
+    }
+    .contentBox {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .imgBox {
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        overflow: hidden;
+        transform: translateY(-50%);
+        z-index: 10;
+        transition: transform .5s linear, width .5s linear, z-index .5s linear;
+        .pdBox {
+            padding-top: 50.633%;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

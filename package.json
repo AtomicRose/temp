@@ -1,0 +1,53 @@
+{
+  "name": "Shinezone-WEB-OfficialSite-Client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "export": "next export",
+    "build-test": "cross-env NODE_ENV=test next build",
+    "start-test": "cross-env NODE_ENV=test pm2 start server/server.js --name Shinezone-WEB-OfficialSite-Client-test",
+    "build-alpha": "cross-env NODE_ENV=alpha next build",
+    "start-alpha": "cross-env NODE_ENV=alpha pm2 start server/server.js --name Shinezone-WEB-OfficialSite-Client-alpha",
+    "build-prod": "cross-env NODE_ENV=production next build",
+    "start-prod": "cross-env NODE_ENV=production pm2 start server/server.js --name Shinezone-WEB-OfficialSite-Client-prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "@zeit/next-sass": "^0.2.0",
+    "antd": "^3.5.4",
+    "cross-env": "^5.1.6",
+    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-unfetch": "^2.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "less": "^3.0.4",
+    "mobx": "^4.3.0",
+    "mobx-react": "^5.1.2",
+    "next": "^6.0.3",
+    "node-sass": "^4.9.0",
+    "qrcode": "^1.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-slick": "^0.23.1"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-beta.3",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "7.0.0-beta.3",
+    "babel-preset-react": "7.0.0-beta.3",
+    "babel-preset-stage-1": "7.0.0-beta.3",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.8.2",
+    "mobx-react-devtools": "^5.0.1"
+  }
+}

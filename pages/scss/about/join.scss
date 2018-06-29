@@ -1,0 +1,533 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+    }
+    .pageBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+    .training {
+        padding: 50px 40px 0 40px;
+        .trainingTitle {
+            font-size: 40px;
+            color: #1a282d;
+            text-align: center;
+        }
+        .trainingDesc {
+            font-size: 18px;
+            color: #1a282d;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+    .vacanciesCard {
+        width: 100%;
+        margin-top: 100px;
+        .cardItem {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+            margin-bottom: 70px;
+        }
+        .cardBox {
+            width: 100%;
+            position: relative;
+            background: #fff;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .cardPadding {
+            padding-top: 100%;
+            overflow: hidden;
+        }
+        .cardContent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 100px 40px 60px 40px;
+            .slogan {
+                font-size: 18px;
+                color: #1a282d;
+                text-align: center;
+                display: block;
+                height: 80px;
+            }
+            .title {
+                font-size: 24px;
+                color: #1a282d;
+                text-align: center;
+            }
+            .desc {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #1a282d;
+                text-indent: 2em;
+            }
+        }
+    }
+    .avatar {
+        width: 130px;
+        height: 130px;
+        border-radius: 65px;
+        border: 1px solid $primary-yellow-color;
+        background-size: contain;
+        position: absolute;
+        top: -65px;
+        left: 50%;
+        margin-left: -65px;
+    }
+    .icon_top {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .icon_bottom {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .icon_top1 {
+        background: url('/static/images/about/icon_top1.png') no-repeat;
+        background-size: contain;
+    }
+    .icon_top2 {
+        background: url('/static/images/about/icon_top2.png') no-repeat;
+        background-size: contain;
+        left: auto;
+        right: 10px;
+        top: 0;
+    }
+    .icon_top3 {
+        background: url('/static/images/about/icon_top3.png') no-repeat;
+        background-size: 45px;
+        left: auto;
+        right: 0;
+        top: 40px;
+    }
+    .icon_top4 {
+        background: url('/static/images/about/icon_top4.png') no-repeat;
+        background-size: 45px;
+        left: auto;
+        right: 0;
+        top: 40px;
+    }
+    .icon_bottom1 {
+        background: url('/static/images/about/icon_bottom1.png') no-repeat;
+        background-size: contain;
+    }
+    .icon_bottom2 {
+        background: url('/static/images/about/icon_bottom2.png') no-repeat;
+        background-size: 60px;
+        bottom: 0;
+    }
+    .icon_bottom3 {
+        background: url('/static/images/about/icon_bottom3.png') no-repeat;
+        background-size: contain;
+        right: auto;
+        left: 10px;
+    }
+    .icon_bottom4 {
+        background: url('/static/images/about/icon_bottom4.png') no-repeat;
+        background-size: contain;
+        right: auto;
+        left: 10px;
+    }
+    .career {
+        width: 100%;
+        padding: 40px;
+        .careerBox {
+            width: 100%;
+            background: #fff;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .careerBox2 {
+            display: none;
+        }
+        .box {
+            width: 50%;
+            display: inline-block;
+            vertical-align: bottom;
+            padding: 50px;
+        }
+        .careerTitle {
+            font-size: 40px;
+            color: #1a282d;
+        }
+        .careerDesc {
+            font-size: 18px;
+            color: #1a282d;
+        }
+        img {
+            width: 100%;
+            margin: 20px 0 20px 0;
+        }
+    }
+    .link {
+        width: 100%;
+        height: 550px;
+        background: url('/static/images/about/worker_bg.png') no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        float: left;
+        padding: 0 60px 0 60px;
+        .workTip1 {
+            font-size: 36px;
+            text-align: center;
+            color: #3BACD5;
+            margin-top: 180px;
+            font-weight: bold;
+        }
+        .workTip2 {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .workBtn {
+            // padding: 6px 30px 6px 30px;
+            width: 340px;
+            height: 60px;
+            line-height: 60px;
+            background: #3BACD5;
+            color: #fff;
+            font-size: 28px;
+            display: inline-block;
+            border-radius: 30px;
+            margin-top: 88px;
+            cursor: pointer;
+            &:hover {
+                background: #50c9f4;
+            }
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {
+    .training {
+        padding: 50px 100px 0 100px;
+    }
+    .vacanciesCard {
+        width: 100%;
+        margin-top: 100px;
+        .cardItem {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+        }
+        .cardPadding {
+            padding: 0;
+            height: 560px;
+            overflow: hidden;
+        }
+        .cardContent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 100px 40px 60px 40px;
+            .slogan {
+                font-size: 18px;
+                color: #1a282d;
+                text-align: center;
+                display: block;
+                height: 120px;
+            }
+            .title {
+                font-size: 24px;
+                color: #1a282d;
+                text-align: center;
+            }
+            .desc {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #1a282d;
+                text-indent: 2em;
+            }
+        }
+    }
+} // xlarge desktop css
+@include media('>bigDesktop',
+'screen') {
+    .vacanciesCard {
+        width: 100%;
+        margin-top: 100px;
+        .cardPadding {
+            padding: 0;
+            height: 500px;
+            overflow: hidden;
+        }
+        .cardContent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 100px 40px 60px 40px;
+            .slogan {
+                font-size: 18px;
+                color: #1a282d;
+                text-align: center;
+                display: block;
+                height: 80px;
+            }
+            .title {
+                font-size: 24px;
+                color: #1a282d;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .desc {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #1a282d;
+                text-indent: 2em;
+            }
+        }
+    }
+}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+    }
+    .pageBox {
+        width: 100%;
+        padding: px2rem(50px);
+    }
+    .training {
+        .trainingTitle {
+            font-size: px2rem(40px);
+            color: #1a282d;
+            text-align: center;
+        }
+        .trainingDesc {
+            font-size: px2rem(18px);
+            color: #1a282d;
+            text-align: center;
+            margin-top: px2rem(30px);
+        }
+    }
+    .vacanciesCard {
+        width: 100%;
+        margin-top: px2rem(40px);
+        .cardItem {
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: px2rem(100px);
+        }
+        .cardBox {
+            width: 100%;
+            position: relative;
+            background: #fff;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .cardContent {
+            @include px2rem('padding',
+            100px 60px 160px 60px);
+            .slogan {
+                font-size: px2rem(20px);
+                color: #1a282d;
+                text-align: center;
+                display: block;
+                height: px2rem(100px);
+            }
+            .title {
+                font-size: px2rem(36px);
+                color: #1a282d;
+                text-align: center;
+            }
+            .desc {
+                margin-top: px2rem(20px);
+                font-size: px2rem(20px);
+                color: #1a282d;
+                text-indent: 2em;
+            }
+        }
+    }
+    .avatar {
+        width: px2rem(130px);
+        height: px2rem(130px);
+        border-radius: px2rem(65px);
+        border: px2px(1px) solid $primary-yellow-color;
+        position: absolute;
+        top: px2rem(-65px);
+        left: 50%;
+        margin-left: px2rem(-65px);
+    }
+    .icon_top {
+        position: absolute;
+        top: px2rem(30px);
+        left: px2rem(10px);
+        width: px2rem(100px);
+        height: px2rem(100px);
+    }
+    .icon_bottom {
+        position: absolute;
+        bottom: px2rem(10px);
+        right: px2rem(10px);
+        width: px2rem(100px);
+        height: px2rem(100px);
+    }
+    .icon_top1 {
+        background: url('/static/images/about/icon_top1.png') no-repeat;
+        background-size: contain;
+    }
+    .icon_top2 {
+        background: url('/static/images/about/icon_top2.png') no-repeat;
+        background-size: contain;
+        left: auto;
+        right: px2rem(10px);
+        top: 0;
+    }
+    .icon_top3 {
+        background: url('/static/images/about/icon_top3.png') no-repeat;
+        background-size: px2rem(60px);
+        left: auto;
+        right: 0;
+        top: px2rem(40px);
+    }
+    .icon_top4 {
+        background: url('/static/images/about/icon_top4.png') no-repeat;
+        background-size: px2rem(60px);
+        left: auto;
+        right: 0;
+        top: px2rem(40px);
+    }
+    .icon_bottom1 {
+        background: url('/static/images/about/icon_bottom1.png') no-repeat;
+        background-size: contain;
+    }
+    .icon_bottom2 {
+        background: url('/static/images/about/icon_bottom2.png') no-repeat;
+        background-size: px2rem(60px);
+        bottom: 0;
+    }
+    .icon_bottom3 {
+        background: url('/static/images/about/icon_bottom3.png') no-repeat;
+        background-size: contain;
+        right: auto;
+        left: px2rem(10px);
+    }
+    .icon_bottom4 {
+        background: url('/static/images/about/icon_bottom4.png') no-repeat;
+        background-size: contain;
+        right: auto;
+        left: px2rem(10px);
+    }
+    .career {
+        width: 100%;
+        margin-top: px2rem(50px);
+        .careerBox {
+            display: none;
+        }
+        .careerBox2 {
+            width: 100%;
+            background: #fff;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .box {
+            width: 100%;
+            display: inline-block;
+            vertical-align: bottom;
+            @include px2rem('padding',
+            20px 20px 0 20px);
+        }
+        .careerTitle {
+            font-size: px2rem(40px);
+            color: #1a282d;
+            text-align: center;
+        }
+        .careerDesc {
+            font-size: px2rem(24px);
+            color: #1a282d;
+            text-align: center;
+            margin-top: px2rem(20px);
+            margin-bottom: px2rem(40px);
+        }
+        hr {
+            width: 100%;
+            border-width: px2px(1px);
+            border-style: dashed;
+            border-color: rgba(0, 0, 0, .1)
+        }
+        img {
+            width: 100%;
+            @include px2rem('margin',
+            40px 0 40px 0);
+        }
+    }
+    .link {
+        width: 100%;
+        height: px2rem(550px);
+        background: url('/static/images/about/worker_bg.png') no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        float: left;
+        @include px2rem('padding',
+        0 50px 0 50px);
+        .workTip1 {
+            font-size: px2rem(36px);
+            text-align: center;
+            color: #3BACD5;
+            margin-top: px2rem(180px);
+            font-weight: bold;
+        }
+        .workTip2 {
+            font-size: px2rem(24px);
+            color: #fff;
+            text-align: center;
+            margin-top: px2rem(10px);
+        }
+        .workBtn {
+            @include px2rem('padding',
+            6px 30px 6px 30px);
+            background: #3BACD5;
+            color: #fff;
+            font-size: px2rem(28px);
+            display: inline-block;
+            border-radius: px2rem(30px);
+            margin-top: px2rem(88px);
+            cursor: pointer;
+        }
+    }
+} // small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.avatar1 {
+    background: url('/static/images/about/avatar_manage.png') no-repeat center center;
+    background-size: contain;
+}
+
+.avatar2 {
+    background: url('/static/images/about/avatar_products.png') no-repeat center center;
+    background-size: contain;
+}
+
+.avatar3 {
+    background: url('/static/images/about/avatar_technology.png') no-repeat center center;
+    background-size: contain;
+}
+
+.avatar4 {
+    background: url('/static/images/about/avatar_round.png') no-repeat center center;
+    background-size: contain;
+}

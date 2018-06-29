@@ -1,0 +1,303 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@include media('>tablet', 'screen') {
+    .header {
+        width: 100%;
+        height: $header-height-p + 40px;
+        background: none;
+        position: fixed;
+        z-index: 2;
+        -webkit-transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+    .headerActive {
+        height: $header-height-p;
+        background: #000;
+    }
+    .headerActive2 {
+        height: $header-height-p;
+        background: rgba(0, 0, 0, .8);
+        display: none;
+    }
+    .headerContainer {
+        max-width: $content-max-width;
+        height: $header-height-p;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+    }
+    .logo {
+        height: 3.5rem;
+        float: left;
+        margin-top: 1rem;
+        cursor: pointer;
+        img {
+            height: 100%;
+        }
+    }
+    .mNavIcon {
+        display: none;
+    }
+    .navBar {
+        float: right;
+        height: $header-height-p - 4;
+        line-height: $header-height-p - 4;
+        margin-right: 20px;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                text-align: center;
+                font-size: 18px;
+                padding: 0 16px 0 16px;
+                cursor: pointer;
+                span {
+                    display: block;
+                    color: #fff;
+                }
+                &:hover {
+                    span {
+                        color: $primary-yellow-color !important;
+                    }
+                }
+            }
+        }
+    }
+    .navBar_active {
+        span {
+            border-bottom: 4px solid #ECA234;
+            color: $primary-yellow-color !important;
+        }
+    }
+    .langContainer {
+        position: relative;
+        float: right;
+        width: 120px;
+        height: 36px;
+        margin-top: 27px;
+    }
+    .lang {
+        width: 120px;
+        height: 36px;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 6px;
+        border-color: rgba(255, 255, 255, .25);
+        float: left;
+        color: #fff;
+        font-size: 20px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+    }
+    .langText {
+        margin-left: 20px;
+    }
+    .triangleDown {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 12px solid #fff;
+        position: absolute;
+        top: 10px;
+        right: 24px;
+    }
+    .langList {
+        display: none;
+        position: relative;
+        width: inherit;
+        overflow: hidden;
+        top: 0;
+        left: -86px;
+        width: 206px;
+        border: 3px solid $primary-yellow-color;
+        background: $primary-yellow-color;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: block;
+                color: #fff;
+                line-height: 46px;
+                font-size: 16px;
+                cursor: pointer;
+                padding-left: 24px;
+            }
+        }
+    }
+}
+
+@include media('>desktop', 'screen') {
+    .navBar {
+        float: right;
+        height: $header-height-p - 4;
+        line-height: $header-height-p - 4;
+        margin-right: 20px;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                text-align: center;
+                font-size: 20px;
+                padding: 0 20px 0 20px;
+                cursor: pointer;
+                span {
+                    padding: 0 20px 0 20px;
+                    display: block;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@include media('<=tablet', 'screen') {
+    .header {
+        width: 100%;
+        height: px2rem($header-height-m);
+        background: #000;
+        position: fixed;
+        z-index: 3;
+    }
+    .headerActive2 {
+        display: none;
+        background: rgba(0, 0, 0, .8);
+    }
+    .headerContainer {
+        width: 100%;
+    }
+    .logo {
+        height: px2rem(64px);
+        float: left;
+        margin-left: px2rem(50px);
+        margin-top: px2rem(($header-height-m - 64px)/2);
+        img {
+            height: 100%;
+        }
+    }
+    .mNavIcon {
+        float: right;
+        position: absolute;
+        right: px2rem(50px);
+        width: px2rem(67px);
+        height: px2rem(56px);
+        top: px2rem($header-height-m - 56px)/2;
+        z-index: 3;
+        img {
+            width: 100%;
+        }
+    }
+    .navBar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: px2rem(370px);
+        height: 100vh;
+        background: #000;
+        z-index: 2;
+        padding-top: px2rem($header-height-m);
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: block;
+                width: 100%;
+                height: px2rem(70px);
+                line-height: px2rem(70px);
+                padding-left: px2rem(70px);
+                font-size: px2rem(36px);
+                cursor: pointer;
+                span {
+                    display: block;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navBar_active {
+        background: #ECA234;
+    }
+    .langContainer {
+        position: absolute;
+        width: px2rem(160px);
+        height: px2rem(48px);
+        top: px2rem(($header-height-m - 48px) / 2);
+        right: px2rem(50px + 67px + 30px);
+    }
+    .lang {
+        width: px2rem(160px);
+        height: px2rem(48px);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: px2rem(6px);
+        border-color: rgba(255, 255, 255, .25);
+        float: left;
+        color: #fff;
+        font-size: px2rem(30px);
+        overflow: hidden;
+        position: absolute;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .langText {
+        margin-left: px2rem(24px);
+    }
+    .triangleDown {
+        width: 0;
+        height: 0;
+        border-left: px2rem(8px) solid transparent;
+        border-right: px2rem(8px) solid transparent;
+        border-top: px2rem(12px) solid #fff;
+        position: absolute;
+        top: 10px;
+        right: px2rem(24px);
+    }
+    .langList {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: px2rem(370px);
+        height: 100vh;
+        background: #000;
+        z-index: 2;
+        padding-top: px2rem($header-height-m);
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: block;
+                width: 100%;
+                height: px2rem(70px);
+                line-height: px2rem(70px);
+                padding-left: px2rem(70px);
+                font-size: px2rem(36px);
+                color: #fff;
+                cursor: pointer;
+                span {
+                    display: block;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.langActive {
+    background: $primary-yellow-color;
+    border-color: $primary-yellow-color;
+}
+
+.langItemActive {
+    background: #CE8315;
+}
+
+.rightBox {
+    height: inherit;
+    float: right;
+    width: 80%;
+}

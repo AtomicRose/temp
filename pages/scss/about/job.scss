@@ -1,0 +1,620 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>desktop', 'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+    .bread {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+        color: #3c3c3c;
+        padding: 0 40px 0 40px;
+        span {
+            margin: 0 5px 0 5px;
+        }
+    }
+    .vacanciesBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding: 5px 40px 40px 40px;
+        .leftBox {
+            width: 380px;
+            padding-right: 10px;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .rightBox {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            padding-left: 10px;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .boxContainer {
+            background: #fff;
+            padding: 10px;
+        }
+        .boxContainer2 {
+            background: #fff;
+            padding: 10px 40px 30px 40px;
+        }
+    }
+    .searchTitle {
+        font-size: 26px;
+        color: #3c3c3c;
+    }
+    .searchBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 10px;
+        input {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            background: #e6e6e6;
+            border: none;
+            border-radius: 4px;
+            padding: 0 20px 0 20px;
+            font-size: 20px;
+        }
+        span {
+            display: inline-block;
+            padding-left: 10px;
+            width: 60px;
+            height: 50px;
+            background: url('/static/images/common/search.png') no-repeat right center;
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                background: url('/static/images/common/search_hover.png') no-repeat right center;
+                background-size: contain;
+            }
+        }
+    }
+    .searchBoxLine {
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #979797;
+        margin-top: 20px;
+    }
+    .categoryBox {
+        padding: 20px 10px 40px 10px;
+    }
+    .categoryTitle {
+        font-size: 26px;
+        color: #3c3c3c;
+        margin-top: 20px;
+    }
+    .categoryItem {
+        display: inline-block;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        color: #9b9b9b;
+        cursor: default;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .categoryItemActive {
+        color: $primary-yellow-color;
+    }
+    .inviteTip {
+        font-size: 26px;
+        color: #3c3c3c;
+    }
+    .sendTip {
+        font-size: 20px;
+        color: #9b9b9b;
+    }
+    .currentCategoryBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 30px;
+        .currentCategoryText {
+            font-size: 26px;
+            color: $primary-yellow-color;
+            padding-right: 40px;
+        }
+        hr {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            position: relative;
+            top: 16px;
+        }
+    }
+    .jobItem {
+        width: 100%;
+        padding: 0 30px 0 30px;
+        border: 1px solid #c8c8c8;
+        margin-top: 20px;
+        .jobTitle {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            font-size: 22px;
+            color: #3c3c3c;
+            .titleText {
+                float: left;
+            }
+            .titleOperate {
+                float: right;
+            }
+        }
+        .jobBox {
+            display: none;
+        }
+        .jobLine {
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            margin: 0;
+        }
+        .jobContent {
+            font-size: 18px;
+            color: #9b9b9b;
+            padding: 10px 0 20px 0;
+        }
+    }
+    .jobItemActive {
+        .jobTitle {
+            color: $primary-yellow-color;
+        }
+        .jobBox {
+            display: block;
+        }
+    }
+}
+
+// large desktop css
+@include media('<=desktop',
+'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+    .bread {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+        color: #3c3c3c;
+        padding: 0 40px 0 40px;
+        span {
+            margin: 0 5px 0 5px;
+        }
+    }
+    .vacanciesBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 5px 40px 40px 40px;
+        .leftBox {
+            width: 100%;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .rightBox {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            margin-top: 20px;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .boxContainer {
+            background: #fff;
+            padding: 10px;
+        }
+        .boxContainer2 {
+            background: #fff;
+            padding: 10px 40px 30px 40px;
+        }
+    }
+    .searchTitle {
+        font-size: 26px;
+        color: #3c3c3c;
+    }
+    .searchBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 10px;
+        input {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            background: #e6e6e6;
+            border: none;
+            border-radius: 4px;
+            padding: 0 20px 0 20px;
+            font-size: 20px;
+        }
+        span {
+            display: inline-block;
+            padding-left: 10px;
+            width: 60px;
+            height: 50px;
+            background: url('/static/images/common/search.png') no-repeat right center;
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                background: url('/static/images/common/search_hover.png') no-repeat right center;
+                background-size: contain;
+            }
+        }
+    }
+    .searchBoxLine {
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #979797;
+        margin-top: 20px;
+    }
+    .categoryBox {
+        padding: 20px 10px 40px 10px;
+    }
+    .categoryTitle {
+        font-size: 26px;
+        color: #3c3c3c;
+        margin-top: 20px;
+    }
+    .categoryItem {
+        display: inline-block;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        color: #9b9b9b;
+        cursor: default;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .categoryItemActive {
+        color: $primary-yellow-color;
+    }
+    .inviteTip {
+        font-size: 26px;
+        color: #3c3c3c;
+    }
+    .sendTip {
+        font-size: 20px;
+        color: #9b9b9b;
+    }
+    .currentCategoryBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 30px;
+        .currentCategoryText {
+            font-size: 26px;
+            color: $primary-yellow-color;
+            padding-right: 40px;
+        }
+        hr {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            position: relative;
+            top: 16px;
+        }
+    }
+    .jobItem {
+        width: 100%;
+        padding: 0 30px 0 30px;
+        border: 1px solid #c8c8c8;
+        margin-top: 20px;
+        .jobTitle {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            font-size: 22px;
+            color: #3c3c3c;
+            .titleText {
+                float: left;
+            }
+            .titleOperate {
+                float: right;
+            }
+        }
+        .jobBox {
+            display: none;
+        }
+        .jobLine {
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            margin: 0;
+        }
+        .jobContent {
+            font-size: 18px;
+            color: #9b9b9b;
+            padding: 10px 0 20px 0;
+        }
+    }
+    .jobItemActive {
+        .jobTitle {
+            color: $primary-yellow-color;
+        }
+        .jobBox {
+            display: block;
+        }
+    }
+}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        width: 100%;
+    }
+    .bread {
+        width: 100%;
+        height: px2rem(50px);
+        line-height: px2rem(50px);
+        margin-top: px2rem(20px);
+        font-size: px2rem(24px);
+        color: #3c3c3c;
+        @include px2rem('padding',
+        0 50px 0 50px);
+        span {
+            @include px2rem('margin',
+            0 5px 0 5px);
+        }
+    }
+    .vacanciesBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        @include px2rem('padding',
+        5px 50px 50px 50px);
+        .leftBox {
+            width: 100%;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .rightBox {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            margin-top: px2rem(40px);
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        }
+        .boxContainer {
+            background: #fff;
+            padding: px2rem(10px);
+        }
+        .boxContainer2 {
+            background: #fff;
+            @include px2rem('padding',
+            10px 20px 30px 20px);
+        }
+    }
+    .searchTitle {
+        font-size: px2rem(26px);
+        color: #3c3c3c;
+    }
+    .searchBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: px2rem(10px);
+        input {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            background: #e6e6e6;
+            border: none;
+            border-radius: px2rem(4px);
+            @include px2rem('padding',
+            0 20px 0 20px);
+            font-size: px2rem(20px);
+        }
+        span {
+            display: inline-block;
+            padding-left: px2rem(10px);
+            width: px2rem(60px);
+            height: px2rem(50px);
+            background: url('/static/images/common/search.png') no-repeat right center;
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                background: url('/static/images/common/search_hover.png') no-repeat right center;
+                background-size: contain;
+            }
+        }
+    }
+    .searchBoxLine {
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #979797;
+        margin-top: px2rem(20px);
+    }
+    .categoryBox {
+        @include px2rem('padding',
+        20px 10px 40px 10px);
+    }
+    .categoryTitle {
+        font-size: px2rem(26px);
+        color: #3c3c3c;
+        margin-top: px2rem(20px);
+    }
+    .categoryItem {
+        display: inline-block;
+        margin-right: px2rem(40px);
+        margin-bottom: px2rem(10px);
+        font-size: px2rem(22px);
+        color: #9b9b9b;
+        cursor: default;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .categoryItemActive {
+        color: $primary-yellow-color;
+    }
+    .inviteTip {
+        font-size: px2rem(26px);
+        color: #3c3c3c;
+    }
+    .sendTip {
+        font-size: px2rem(20px);
+        color: #9b9b9b;
+    }
+    .currentCategoryBox {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: px2rem(30px);
+        .currentCategoryText {
+            font-size: px2rem(26px);
+            color: $primary-yellow-color;
+            padding-right: px2rem(40px);
+        }
+        hr {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            border-width: px2px(1px);
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            position: relative;
+            top: px2rem(8px);
+        }
+    }
+    .jobItem {
+        width: 100%;
+        @include px2rem('padding',
+        0 30px 0 30px);
+        @include px2px('border',
+        1px solid #c8c8c8);
+        margin-top: 20px;
+        .jobTitle {
+            width: 100%;
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            font-size: px2rem(22px);
+            color: #3c3c3c;
+            .titleText {
+                float: left;
+            }
+            .titleOperate {
+                float: right;
+            }
+        }
+        .jobBox {
+            display: none;
+        }
+        .jobLine {
+            width: 100%;
+            border-width: px2px(1px);
+            border-style: solid;
+            border-color: $primary-yellow-color;
+            margin: 0;
+        }
+        .jobContent {
+            font-size: px2rem(18px);
+            color: #9b9b9b;
+            @include px2rem('padding',
+            10px 0 20px 0);
+        }
+    }
+    .jobItemActive {
+        .jobTitle {
+            color: $primary-yellow-color;
+        }
+        .jobBox {
+            display: block;
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css

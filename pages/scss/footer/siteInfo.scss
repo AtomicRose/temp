@@ -1,0 +1,239 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .container {
+        max-width: $content-max-width - 300px;
+        margin: 0 auto;
+        padding: 40px 20px 40px 20px;
+    }
+    .logo {
+        text-align: center;
+        padding-bottom: 12px;
+        img {
+            width: 225px;
+        }
+    }
+    .slogan {
+        text-align: center;
+        color: #787878;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding-top: 40px;
+    }
+    .info {
+        display: inline-block;
+        max-width: 400px;
+        p {
+            color: #646464;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    .join {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+    .joinMobile {
+        display: none;
+    }
+    .joinGroup {
+        width: 238px;
+        float: right;
+        margin-left: 20px;
+    }
+    .joinItem {
+        width: 238px;
+        height: 50px;
+        color: #828282;
+        font-size: 14px;
+        line-height: 50px;
+        padding-left: 70px;
+        border: 1px solid #fff;
+        float: left;
+        margin-bottom: 20px;
+        a {
+            display: block;
+        }
+    }
+    .netSave {
+        background: #2d2d2d url('/static/images/netSave.png') no-repeat left;
+    }
+    .selfSave {
+        text-align: center;
+        padding-left: 0;
+        color: #cf0000;
+    }
+    .childSave {
+        background: #2d2d2d url('/static/images/childSave.png') no-repeat left;
+    }
+    .police {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url('/static/images/police.png');
+        background-size: contain;
+        margin-right: 10px;
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .container {
+        width: 100%;
+        padding: px2rem(50px);
+    }
+    .logo {
+        text-align: center;
+        padding-bottom: px2rem(16px);
+        img {
+            width: px2rem(225px);
+        }
+    }
+    .slogan {
+        text-align: center;
+        color: #787878;
+        font-size: px2rem(20px);
+        line-height: px2rem(26px);
+    }
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding-top: px2rem(40px);
+    }
+    .info {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        display: inline-block;
+        padding-right: px2rem(20px);
+        p {
+            color: #646464;
+            font-size: px2rem(16px);
+        }
+    }
+    .join {
+        width: px2rem(338px);
+        display: none;
+    }
+    .joinMobile {
+        width: px2rem(338px);
+        display: block;
+    }
+    .joinGroup {
+        float: right;
+    }
+    .joinItem {
+        width: px2rem(338px);
+        height: px2rem(50px);
+        color: #828282;
+        font-size: px2rem(14px);
+        line-height: px2rem(50px);
+        padding-left: px2rem(50px);
+        text-align: center;
+        border: 1px solid #fff;
+        float: left;
+        margin-bottom: px2rem(20px);
+        a {
+            display: block;
+        }
+    }
+    .netSave {
+        background: #2d2d2d url('/static/images/netSave.png') no-repeat left;
+        background-size: contain;
+    }
+    .selfSave {
+        padding-left: 0;
+        text-align: center;
+        color: #cf0000;
+    }
+    .childSave {
+        background: #2d2d2d url('/static/images/childSave.png') no-repeat left;
+        background-size: contain;
+    }
+    .police {
+        width: px2rem(20px);
+        height: px2rem(20px);
+        display: inline-block;
+        background: url('/static/images/police.png');
+        background-size: contain;
+        margin-right: px2rem(10px);
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {
+    .flex {
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    .info {
+        float: left;
+        padding-right: px2rem(20px);
+        p {
+            color: #646464;
+            font-size: px2rem(16px);
+        }
+    }
+    .join {
+        display: none;
+    }
+    .joinMobile {
+        width: px2rem(338px);
+        float: left;
+        margin-top: px2rem(40px);
+        display: block;
+    }
+    .joinGroup {
+        float: left;
+    }
+    .joinItem {
+        width: px2rem(338px);
+        height: px2rem(50px);
+        color: #828282;
+        font-size: px2rem(14px);
+        line-height: px2rem(50px);
+        padding-left: px2rem(50px);
+        text-align: center;
+        border: 1px solid #fff;
+        float: left;
+        margin-bottom: px2rem(20px);
+        a {
+            display: block;
+        }
+    }
+    .selfSave {
+        text-align: center;
+        padding-left: 0;
+        color: #cf0000;
+    }
+}
+
+// usually css
+.footerInfo {
+    width: 100%;
+    background: #000;
+    float: left;
+}

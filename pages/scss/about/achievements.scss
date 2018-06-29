@@ -1,0 +1,212 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .slider3dBox {
+        width: 100%;
+        background: #f0f0f0;
+        padding: 100px 75px 100px 75px;
+        .box {
+            width: 100%;
+            position: relative;
+            padding-top: 30%;
+        }
+    }
+    .achievementContainer {
+        width: 100%;
+        background: #fff;
+    }
+    .achievementBox {
+        max-width: $content-max-width;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 40px 60px 40px 60px;
+    }
+    .growthTitle {
+        font-size: 48px;
+        color: $primary-yellow-color;
+        text-align: center;
+        font-weight: bold;
+    }
+    .progressBox {
+        width: 100%;
+        margin-top: 50px;
+        padding-bottom: 80px;
+        position: relative;
+        .line {
+            width: 4px;
+            height: 100%;
+            background: #bebebe;
+            position: absolute;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .circle {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            left: 50%;
+            top: -28px;
+            margin-left: -14px;
+            background: url('/static/images/about/progress_dot_circle.png') no-repeat;
+            background-size: contain;
+        }
+    }
+    .itemBoxLeft {
+        width: 50%;
+        text-align: right;
+        padding: 20px 60px 20px 60px;
+        position: relative;
+        left: -50vw;
+        -webkit-transition: left 0.5s ease-in-out;
+        transition: left 0.5s ease-in-out;
+        .time {
+            font-size: 36px;
+            color: $primary-yellow-color;
+            background: url('/static/images/about/progress_dot_right.png') no-repeat right center;
+            background-size: 28px;
+            padding-right: 46px;
+        }
+    }
+    .itemBoxRight {
+        width: 50%;
+        margin-left: 50%;
+        padding: 20px 60px 20px 60px;
+        position: relative;
+        left: 50vw;
+        -webkit-transition: left 0.5s ease-in-out;
+        transition: left 0.5s ease-in-out;
+        .time {
+            font-size: 36px;
+            color: $primary-yellow-color;
+            background: url('/static/images/about/progress_dot_left.png') no-repeat left center;
+            background-size: 28px;
+            padding-left: 46px;
+        }
+    }
+    .record {
+        font-size: 24px;
+        color: #1A282D;
+    }
+    .grayBox {
+        width: 100%;
+        height: 96px;
+        float: left;
+        background: #f0f0f0;
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .slider3dBox {
+        width: 100%;
+        background: #f0f0f0;
+        @include px2rem('padding',
+        50px 0 50px 0);
+        .box {
+            width: 100%;
+            position: relative;
+            padding-top: 40%;
+        }
+    }
+    .achievementContainer {
+        width: 100%;
+        background: #fff;
+    }
+    .achievementBox {
+        width: 100%;
+        max-width: $content-max-width;
+        overflow: hidden;
+        padding: px2rem(50px);
+    }
+    .growthTitle {
+        font-size: px2rem(48px);
+        color: $primary-yellow-color;
+        text-align: center;
+        font-weight: bold;
+    }
+    .progressBox {
+        width: 100%;
+        margin-top: px2rem(50px);
+        padding-bottom: px2rem(80px);
+        position: relative;
+        .line {
+            width: px2rem(4px);
+            height: 100%;
+            background: #bebebe;
+            position: absolute;
+            left: 50%;
+            margin-left: px2rem(-2px);
+        }
+        .circle {
+            width: px2rem(28px);
+            height: px2rem(28px);
+            position: absolute;
+            left: 50%;
+            top: px2rem(-28px);
+            margin-left: px2rem(-14px);
+            background: url('/static/images/about/progress_dot_circle.png') no-repeat;
+            background-size: contain;
+        }
+    }
+    .itemBoxLeft {
+        width: 50%;
+        text-align: right;
+        @include px2rem('padding',
+        20px 30px 20px 0);
+        position: relative;
+        left: -50vw;
+        -webkit-transition: left 0.5s ease-in-out;
+        transition: left 0.5s ease-in-out;
+        .time {
+            font-size: px2rem(32px);
+            color: $primary-yellow-color;
+            background: url('/static/images/about/progress_dot_right.png') no-repeat right center;
+            background-size: px2rem(28px);
+            padding-right: px2rem(46px);
+        }
+    }
+    .itemBoxRight {
+        width: 50%;
+        margin-left: 50%;
+        @include px2rem('padding',
+        20px 0 20px 30px);
+        position: relative;
+        left: 50vw;
+        -webkit-transition: left 0.5s ease-in-out;
+        transition: left 0.5s ease-in-out;
+        .time {
+            font-size: px2rem(32px);
+            color: $primary-yellow-color;
+            background: url('/static/images/about/progress_dot_left.png') no-repeat left center;
+            background-size: px2rem(28px);
+            padding-left: px2rem(46px);
+        }
+    }
+    .record {
+        font-size: px2rem(24px);
+        color: #1A282D;
+    }
+    .grayBox {
+        width: 100%;
+        height: px2rem(96px);
+        float: left;
+        background: #f0f0f0;
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css

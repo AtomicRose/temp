@@ -1,0 +1,313 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 10px 100px 96px 100px;
+    }
+    .incubationBanner {
+        width: 100%;
+        height: 380px;
+        background: url('/static/images/about/incubation_banner_p.png') no-repeat center center;
+        background-size: cover;
+    }
+    .incubationText {
+        position: relative;
+        top: $header-height-p;
+        span {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        .incubationTitle {
+            font-size: 56px;
+            color: #fff;
+        }
+        .incubationSlogan {
+            font-size: 22px;
+            color: #fff;
+        }
+    }
+    .bread {
+        margin-top: 20px;
+        font-size: 20px;
+        span {
+            font-size: 20px;
+            color: #3c3c3c;
+            margin: 0 4px 0 4px;
+        }
+    }
+    .formBox {
+        width: 100%;
+        background: #fff;
+        -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+        padding: 20px 40px 20px 40px;
+        margin-top: 10px;
+    }
+    .contactFormTitle {
+        font-size: 26px;
+        color: $primary-yellow-color;
+    }
+    .contactFormDesc {
+        font-size: 20px;
+        color: #9b9b9b;
+    }
+    .column {
+        width: 100%;
+        display: inline-block;
+        padding: 10px 20px 10px 20px;
+        vertical-align: top;
+    }
+    .callTitle {
+        font-size: 24px;
+        color: #343434;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .submitBtn {
+        width: 230px;
+        float: right;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 4px;
+        border: none;
+        background: $primary-yellow-color;
+        cursor: pointer;
+        margin-right: 56px;
+        &:disabled {
+            background: #ccc;
+            cursor: default;
+        }
+    }
+    .demoUpload {
+        font-size: 20px;
+        color: #343434;
+    }
+    .uploadBtn {
+        display: inline-block;
+        padding: 0 40px 0 80px;
+        background: #fff url('/static/images/about/uploadIcon.png') no-repeat left center;
+        background-size: 20px;
+        background-position-x: 20px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 4px;
+        border: 1px solid #979797;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .uploadTip {
+        font-size: 14px;
+        color: #9b9b9b;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .fileNameBox {
+        width: 100%;
+        padding-right: 56px;
+    }
+    .fileName {
+        padding: 4px 16px 4px 16px;
+        background: rgba(59, 172, 213, .15);
+        color: #9d9d9d;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .closeIcon {
+        width: 30px;
+        height: 30px;
+        background: url('/static/images/about/close.png') no-repeat center center;
+        background-size: 16px;
+        float: right;
+        margin-left: 30px;
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {
+    .column {
+        width: 50%;
+        display: inline-block;
+        padding: 10px 20px 10px 20px;
+        vertical-align: top;
+    }
+}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        width: 100%;
+        @include px2rem('padding',
+        10px 50px 100px 50px);
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {
+    .pageContainer {
+        width: 100%;
+        background: #f0f0f0;
+        float: left;
+    }
+    .pageBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        @include px2rem('padding',
+        10px 50px 60px 50px);
+    }
+    .incubationBanner {
+        width: 100%;
+        height: px2rem(380px);
+        background: url('/static/images/about/incubation_banner_m.png') no-repeat center center;
+        background-size: cover;
+    }
+    .incubationText {
+        position: relative;
+        top: px2rem($header-height-m + 28px);
+        span {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        .incubationTitle {
+            font-size: px2rem(48px);
+            color: #fff;
+        }
+        .incubationSlogan {
+            font-size: px2rem(24px);
+            color: #fff;
+        }
+    }
+    .bread {
+        margin-top: px2rem(20px);
+        span {
+            font-size: px2rem(24px);
+            color: #3c3c3c;
+            @include px2rem('margin',
+            0 4px 0 4px);
+        }
+    }
+    .formBox {
+        width: 100%;
+        background: #fff;
+        @include px2px('box-shadow',
+        1px 2px 2px 2px rgba(0,
+        0,
+        0,
+        .1));
+        @include px2rem('padding',
+        20px 10px 20px 10px);
+        margin-top: px2rem(10px);
+    }
+    .contactFormTitle {
+        font-size: px2rem(26px);
+        color: $primary-yellow-color;
+    }
+    .contactFormDesc {
+        font-size: px2rem(24px);
+        color: #9b9b9b;
+    }
+    .column {
+        width: 100%;
+        display: inline-block;
+        @include px2rem('padding',
+        10px 20px 10px 20px);
+        vertical-align: top;
+    }
+    .callTitle {
+        font-size: px2rem(24px);
+        color: #343434;
+        padding-left: px2rem(20px);
+        margin-top: px2rem(20px);
+    }
+    .submitBtn {
+        width: px2rem(300px);
+        position: relative;
+        left: 50%;
+        margin-left: px2rem(-150px);
+        height: px2rem(60px);
+        line-height: px2rem(60px);
+        text-align: center;
+        color: #fff;
+        font-size: px2rem(24px);
+        border-radius: px2rem(4px);
+        border: none;
+        background: $primary-yellow-color;
+        cursor: pointer;
+        &:disabled {
+            background: #ccc;
+            cursor: default;
+        }
+    }
+    .demoUpload {
+        font-size: px2rem(20px);
+        color: #343434;
+    }
+    .uploadBtn {
+        display: inline-block;
+        @include px2rem('padding',
+        0 40px 0 80px);
+        background: #fff url('/static/images/about/uploadIcon.png') no-repeat left center;
+        background-size: px2rem(20px);
+        background-position-x: px2rem(20px);
+        height: px2rem(50px);
+        line-height: px2rem(50px);
+        border-radius: px2rem(4px);
+        @include px2px('border',
+        1px solid #979797);
+        margin-top: px2rem(20px);
+        cursor: pointer;
+    }
+    .uploadTip {
+        font-size: px2rem(20px);
+        color: #9b9b9b;
+        margin-top: px2rem(10px);
+        margin-bottom: px2rem(20px);
+    }
+    .fileNameBox {
+        width: 100%;
+        padding-right: px2rem(56px);
+    }
+    .fileName {
+        display: inline-block;
+        @include px2rem('padding',
+        4px 16px 10px 16px);
+        width: 100%;
+        background: rgba(59, 172, 213, .15);
+        color: #9d9d9d;
+        font-size: px2rem(22px);
+        margin-bottom: px2rem(20px);
+    }
+    .closeIcon {
+        width: px2rem(36px);
+        height: px2rem(36px);
+        background: url('/static/images/about/close.png') no-repeat center center;
+        background-size: px2rem(16px);
+        float: right;
+        margin-left: px2rem(30px);
+    }
+}
+
+// usually css

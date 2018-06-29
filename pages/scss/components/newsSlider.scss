@@ -1,0 +1,44 @@
+.sliderBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .sliderContainer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .sliderContent {
+        position: absolute;
+        overflow: hidden;
+        height: inherit;
+        -webkit-transition: -webkit-transform .5s ease-in-out;
+        transition: -webkit-transform .5s ease-in-out;
+        transition: transform .5s ease-in-out;
+        transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+        .item {
+            float: left;
+            height: inherit;
+            overflow: hidden;
+        }
+    }
+    .dotBox {
+        width: 100%;
+        height: 14px;
+        position: absolute;
+        bottom: 10px;
+        text-align: right;
+        padding-right: 20px;
+        .dot {
+            display: inline-block;
+            width: 36px;
+            height: 12px;
+            border-radius: 8px;
+            background: #bebebe;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .dotActive {
+            background: #ffac32;
+        }
+    }
+}

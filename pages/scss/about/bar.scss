@@ -1,0 +1,188 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .barContainer {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        transition: background-image 0.2s ease;
+        transition-property: background-image;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        transition-delay: initial;
+        background: linear-gradient(100deg, #FFA729, #A0001C, #56057A, #0283A9);
+        background-size: 600% 600%;
+        animation: bg-generator 40s ease infinite;
+    }
+    .barContainer1 {
+        width: 100%;
+        height: 300px;
+        background: -webkit-linear-gradient(left, #FFA729, #A0001C);
+        background: -o-linear-gradient(left, #FFA729, #A0001C);
+        background: -moz-linear-gradient(left, #FFA729, #A0001C);
+        background: linear-gradient(left, #FFA729, #A0001C);
+        position: relative;
+    }
+    .barContainer2 {
+        width: 100%;
+        height: 300px;
+        background: -webkit-linear-gradient(left, #9C0D27, #56057A);
+        background: -o-linear-gradient(left, #9C0D27, #56057A);
+        background: -moz-linear-gradient(left, #9C0D27, #56057A);
+        background: linear-gradient(left, #9C0D27, #56057A);
+        position: relative;
+    }
+    .barContainer3 {
+        width: 100%;
+        height: 300px;
+        background: -webkit-linear-gradient(left, #5F0B83, #0283A9);
+        background: -o-linear-gradient(left, #5F0B83, #0283A9);
+        background: -moz-linear-gradient(left, #5F0B83, #0283A9);
+        background: linear-gradient(left, #5F0B83, #0283A9);
+        position: relative;
+    }
+    .barContainer4 {
+        width: 100%;
+        height: 300px;
+        background: -webkit-linear-gradient(left, #0689B0, #FFA729);
+        background: -o-linear-gradient(left, #0689B0, #FFA729);
+        background: -moz-linear-gradient(left, #0689B0, #FFA729);
+        background: linear-gradient(left, #0689B0, #FFA729);
+        position: relative;
+    }
+    .barBox {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .3);
+    }
+    .bar {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: $header-height-p 100px 30px 100px;
+        p {
+            margin-top: 40px;
+            text-align: center;
+            span {
+                display: inline-block;
+                vertical-align: baseline;
+                color: #fff;
+            }
+        }
+        .companyName {
+            font-size: 64px;
+            margin-right: 40px;
+        }
+        .slogan {
+            font-size: 36px;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .barContainer {
+        width: 100%;
+        height: px2rem(300px);
+        position: relative;
+        transition: background-image 0.2s ease;
+        transition-property: background-image;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        transition-delay: initial;
+        background: linear-gradient(100deg, #FFA729, #A0001C, #56057A, #0283A9);
+        background-size: 600% 600%;
+        animation: bg-generator 40s ease infinite;
+    }
+    .barContainer1 {
+        width: 100%;
+        height: px2rem(300px);
+        background: -webkit-linear-gradient(left, #FFA729, #A0001C);
+        background: -o-linear-gradient(left, #FFA729, #A0001C);
+        background: -moz-linear-gradient(left, #FFA729, #A0001C);
+        background: linear-gradient(left, #FFA729, #A0001C);
+        position: relative;
+    }
+    .barContainer2 {
+        width: 100%;
+        height: px2rem(300px);
+        background: -webkit-linear-gradient(left, #9C0D27, #56057A);
+        background: -o-linear-gradient(left, #9C0D27, #56057A);
+        background: -moz-linear-gradient(left, #9C0D27, #56057A);
+        background: linear-gradient(left, #9C0D27, #56057A);
+        position: relative;
+    }
+    .barContainer3 {
+        width: 100%;
+        height: px2rem(300px);
+        background: -webkit-linear-gradient(left, #5F0B83, #0283A9);
+        background: -o-linear-gradient(left, #5F0B83, #0283A9);
+        background: -moz-linear-gradient(left, #5F0B83, #0283A9);
+        background: linear-gradient(left, #5F0B83, #0283A9);
+        position: relative;
+    }
+    .barContainer4 {
+        width: 100%;
+        height: px2rem(300px);
+        background: -webkit-linear-gradient(left, #0689B0, #FFA729);
+        background: -o-linear-gradient(left, #0689B0, #FFA729);
+        background: -moz-linear-gradient(left, #0689B0, #FFA729);
+        background: linear-gradient(left, #0689B0, #FFA729);
+        position: relative;
+    }
+    .barBox {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .3);
+    }
+    .bar {
+        width: 100%;
+        margin: 0 auto;
+        @include px2rem('padding', $header-height-m 50px 30px 50px);
+        p {
+            margin-top: px2rem(40px);
+            text-align: center;
+            span {
+                display: inline-block;
+                vertical-align: baseline;
+                color: #fff;
+            }
+        }
+        .companyName {
+            font-size: px2rem(48px);
+            margin-right: px2rem(20px);
+        }
+        .slogan {
+            font-size: px2rem(36px);
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css
+@keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}

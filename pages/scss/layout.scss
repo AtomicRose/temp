@@ -1,0 +1,17 @@
+@import "./variable.scss";
+@import "./include-media.scss";
+@include media('>=tablet', 'screen') {
+    .pageContent {
+        padding-top: $header-height-p;
+    }
+}
+
+@include media('<tablet', 'screen') {
+    .pageContent {
+        padding-top: $header-height-m;
+    }
+}
+
+.appLayout {
+    width: 100%;
+}

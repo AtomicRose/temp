@@ -1,0 +1,336 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .toastContainer {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        text-align: center;
+        z-index: 99;
+    }
+    .toastItem {
+        position: relative;
+        left: -50%;
+    }
+    .toastMessage {
+        padding: 8px 10px 8px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 10px;
+        background: #fff;
+        font-size: 16px;
+        -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+    }
+    .default {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/info-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .info {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/info-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .error {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/close-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .success {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/check-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .danger {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/danger-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .warning {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/warning-circle.png') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .loading {
+        .toastMessage {
+            padding-left: 46px;
+            background: #fff url('/static/images/common/element_loading.gif') no-repeat left center;
+            background-size: 24px;
+            background-position: 10px;
+        }
+    }
+    .confirmContainer,
+    .alertContainer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background: rgba(0, 0, 0, .5);
+        .confirmItem,
+        .alertItem {
+            width: 420px;
+            position: relative;
+            top: 40%;
+            left: 50%;
+            margin-left: -210px;
+            background: #fff;
+            padding: 20px 20px 0 20px;
+            border-radius: 8px;
+        }
+    }
+    .tipTitle {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dfdfdf;
+        color: #333;
+    }
+    .tipMessage {
+        font-size: 16px;
+        padding: 20px 10px 20px 10px;
+        color: #999;
+    }
+    .btnCancel {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        color: #9a9a9a;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        -webkit-transition: top .2s ease-in-out;
+        transition: top .2s ease-in-out;
+        &:hover {
+            position: relative;
+            top: -4px;
+        }
+    }
+    .btnOk {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        color: $primary-yellow-color;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        -webkit-transition: top .2s ease-in-out;
+        transition: top .2s ease-in-out;
+        &:hover {
+            position: relative;
+            top: -4px;
+        }
+    }
+    .alertContainer {
+        .alertItem {
+            .btnOk {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .toastContainer {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        text-align: center;
+        z-index: 99;
+    }
+    .toastItem {
+        position: relative;
+        left: -50%;
+    }
+    .toastMessage {
+        @include px2rem('padding',
+        8px 20px 8px 20px);
+        border-radius: px2rem(4px);
+        display: inline-block;
+        margin-top: px2rem(10px);
+        background: #fff;
+        font-size: px2rem(24px);
+        @include px2px('box-shadow',
+        1px 2px 2px 2px rgba(0,
+        0,
+        0,
+        .1));
+    }
+    .default {
+        .toastMessage {
+            background: #fff url('/static/images/common/info-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .info {
+        .toastMessage {
+            background: #fff url('/static/images/common/info-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .error {
+        .toastMessage {
+            background: #fff url('/static/images/common/close-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .success {
+        .toastMessage {
+            background: #fff url('/static/images/common/check-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .danger {
+        .toastMessage {
+            background: #fff url('/static/images/common/danger-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .warning {
+        .toastMessage {
+            background: #fff url('/static/images/common/warning-circle.png') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .loading {
+        .toastMessage {
+            background: #fff url('/static/images/common/element_loading.gif') no-repeat left center;
+            background-size: px2rem(24px);
+            background-position: px2rem(20px);
+            padding-left: px2rem(56px);
+        }
+    }
+    .confirmContainer,
+    .alertContainer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background: rgba(0, 0, 0, .5);
+        .confirmItem,
+        .alertItem {
+            width: px2rem(560px);
+            position: relative;
+            top: 40%;
+            left: 50%;
+            margin-left: px2rem(-280px);
+            background: #fff;
+            @include px2rem('padding',
+            20px 20px 0 20px);
+            border-radius: px2rem(8px);
+        }
+    }
+    .tipTitle {
+        text-align: center;
+        font-size: px2rem(28px);
+        padding-bottom: px2rem(20px);
+        @include px2px('border-bottom',
+        1px solid #dfdfdf);
+        color: #333;
+    }
+    .tipMessage {
+        font-size: px2rem(24px);
+        @include px2rem('padding',
+        20px 20px 20px 20px);
+        color: #999;
+    }
+    .btnCancel {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        font-size: px2rem(24px);
+        color: #9a9a9a;
+        padding: px2rem(20px);
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        -webkit-transition: top .2s ease-in-out;
+        transition: top .2s ease-in-out;
+        &:hover {
+            position: relative;
+            top: px2rem(-4px);
+        }
+    }
+    .btnOk {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        color: $primary-yellow-color;
+        font-size: px2rem(20px);
+        padding: px2rem(20px);
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        -webkit-transition: top .2s ease-in-out;
+        transition: top .2s ease-in-out;
+        &:hover {
+            position: relative;
+            top: px2rem(-4px);
+        }
+    }
+    .alertContainer {
+        .alertItem {
+            .btnOk {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css

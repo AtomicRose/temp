@@ -1,0 +1,99 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .browserPage {
+        width: 100%;
+        background: #f0f0f0;
+        padding-top: $header-height-p;
+    }
+    .browserContainer {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 50px 70px 50px 70px;
+        .browserBox {
+            width: 100%;
+            padding: 10px 60px 30px 60px;
+            background: #fff;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .tip1 {
+        font-size: 36px;
+        color: $primary-yellow-color;
+        margin-top: 60px;
+    }
+    .tip2 {
+        font-size: 24px;
+        color: $primary-yellow-color;
+    }
+    .tip3 {
+        font-size: 20px;
+        color: #868686;
+        margin-top: 24px;
+    }
+    .browserPic {
+        width: 420px;
+        margin-top: 50px;
+        position: relative;
+        left: 50%;
+        margin-left: -210px;
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .browserPage {
+        width: 100%;
+        background: #f0f0f0;
+        padding-top: px2rem($header-height-m);
+    }
+    .browserContainer {
+        max-width: 100%;
+        margin: 0 auto;
+        @include px2rem('padding', 50px 50px 50px 50px);
+        .browserBox {
+            width: 100%;
+            @include px2rem('padding', 10px 20px 30px 20px);
+            background: #fff;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .tip1 {
+        font-size: px2rem(36px);
+        color: $primary-yellow-color;
+        margin-top: px2rem(60px);
+    }
+    .tip2 {
+        font-size: px2rem(24px);
+        color: $primary-yellow-color;
+    }
+    .tip3 {
+        font-size: px2rem(20px);
+        color: #868686;
+        margin-top: px2rem(24px);
+    }
+    .browserPic {
+        width: px2rem(420px);
+        margin-top: px2rem(50px);
+        position: relative;
+        left: 50%;
+        margin-left: px2rem(-210px);
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css

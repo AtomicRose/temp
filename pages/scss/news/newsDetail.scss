@@ -1,0 +1,296 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .newsDetailPage {
+        width: 100%;
+        padding-top: $header-height-p;
+        background: #f0f0f0;
+    }
+    .newsContainer {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 50px 70px 50px 70px;
+        .newsBox {
+            width: 100%;
+            padding: 10px 60px 30px 60px;
+            background: #fff;
+        }
+    }
+    .bread {
+        font-size: 16px;
+        color: #969696;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #d3d3d3;
+        span {
+            padding: 0 4px 0 4px;
+        }
+        a {
+            &:hover {
+                color: $primary-yellow-color;
+            }
+        }
+    }
+    .title {
+        width: 100%;
+        padding: 40px 0 30px 0;
+        text-align: center;
+        font-size: 36px;
+        color: #000;
+    }
+    .info {
+        font-size: 16px;
+        text-align: center;
+        .from {
+            color: $primary-yellow-color;
+            margin-right: 160px;
+        }
+        .time {
+            color: #969696;
+        }
+    }
+    .content {
+        margin-top: 20px;
+        padding: 30px 0 80px 0;
+        border-top: 1px dashed #d3d3d3;
+        border-bottom: 1px dashed #d3d3d3;
+        font-size: 16px;
+        line-height: 30px;
+        color: #595959;
+        p {
+            text-indent: 2em;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        a {
+            color: $primary-yellow-color;
+        }
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .operate {
+        width: 100%;
+        height: 40px;
+        margin-top: 30px;
+        .continueBox {
+            float: right;
+            span {
+                display: inline-block;
+                margin-left: 10px;
+                line-height: 40px;
+                text-align: center;
+                width: 140px;
+                border-radius: 4px;
+                a {
+                    display: block;
+                }
+            }
+            .prev {
+                background: #cdcdcd;
+            }
+            .next {
+                background: $primary-yellow-color;
+            }
+        }
+    }
+    .languageErrorImg {
+        width: 420px;
+        position: relative;
+        left: 50%;
+        margin-left: -210px;
+        margin-top: 40px;
+    }
+    .languageTip {
+        color: $primary-yellow-color;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .seeOtherLanguage {
+        text-align: center;
+        margin-top: 40px;
+        span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: $primary-yellow-color;
+            padding: 0 20px 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+    .shareIcon {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        display: inline-block;
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .newsDetailPage {
+        width: 100%;
+        padding-top: px2rem($header-height-m);
+        background: #f0f0f0;
+    }
+    .newsContainer {
+        width: 100%;
+        .newsBox {
+            width: 100%;
+            @include px2rem('padding', 20px 50px 60px 50px);
+            background: #fff;
+        }
+    }
+    .bread {
+        display: none;
+    }
+    .title {
+        width: 100%;
+        @include px2rem('padding', 40px 0 30px 0); // padding: 40px 0 30px 0;
+        text-align: center;
+        font-size: px2rem(42px);
+        color: #000;
+    }
+    .info {
+        font-size: px2rem(20px);
+        text-align: center;
+        .from {
+            color: $primary-yellow-color;
+            margin-right: px2rem(100px);
+        }
+        .time {
+            color: #969696;
+        }
+    }
+    .content {
+        margin-top: px2rem(40px);
+        @include px2rem('padding', 40px 0 80px 0);
+        border-top: 1px dashed #d3d3d3;
+        border-bottom: 1px dashed #d3d3d3;
+        font-size: px2rem(24px);
+        line-height: px2rem(48px);
+        color: #595959;
+        p {
+            text-indent: 2em;
+            text-align: justify;
+            margin-bottom: px2rem(10px);
+        }
+        a {
+            color: $primary-yellow-color;
+        }
+        img {
+            max-width: 100%;
+            margin-bottom: px2rem(20px);
+        }
+    }
+    .operate {
+        width: 100%;
+        margin-top: px2rem(40px);
+        .continueBox {
+            width: 100%;
+            text-align: center;
+            span {
+                display: inline-block;
+                line-height: px2rem(60px);
+                text-align: center;
+                width: px2rem(170px);
+                border-radius: px2rem(4px);
+                a {
+                    display: block;
+                }
+            }
+            .prev {
+                background: #cdcdcd;
+            }
+            .next {
+                margin-left: px2rem(80px);
+                background: $primary-yellow-color;
+            }
+        }
+    }
+    .languageErrorImg {
+        width: px2rem(420px);
+        position: relative;
+        left: 50%;
+        margin-left: px2rem(-210px);
+        margin-top: px2rem(80px);
+    }
+    .languageTip {
+        color: $primary-yellow-color;
+        font-size: px2rem(36px);
+        text-align: center;
+        margin-top: px2rem(50px);
+    }
+    .seeOtherLanguage {
+        text-align: center;
+        margin-top: px2rem(70px);
+        span {
+            display: inline-block;
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            color: #fff;
+            background: $primary-yellow-color;
+            @include px2rem('padding', 0 20px 0 20px);
+            border-radius: px2rem(4px);
+            cursor: pointer;
+            font-size: px2rem(24px);
+        }
+    }
+    .shareBox {
+        text-align: center;
+        margin-bottom: px2rem(20px);
+        margin-top: px2rem(40px);
+    }
+    .shareIcon {
+        width: px2rem(30px);
+        height: px2rem(30px);
+        margin-right: px2rem(20px);
+        display: inline-block;
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css
+.noIndent {
+    text-indent: 0em !important;
+}
+
+.languageError {
+    display: none;
+}
+
+.shareWechat {
+    background: url('/static/images/share/wechat.png') no-repeat center center;
+    background-size: contain;
+}
+
+.shareWeibo {
+    background: url('/static/images/share/weibo.png') no-repeat center center;
+    background-size: contain;
+}
+
+.shareFacebook {
+    background: url('/static/images/share/facebook.png') no-repeat center center;
+    background-size: contain;
+}
+
+.shareTwitter {
+    background: url('/static/images/share/twitter.png') no-repeat center center;
+    background-size: contain;
+}

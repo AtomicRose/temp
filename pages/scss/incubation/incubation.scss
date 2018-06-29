@@ -1,0 +1,1397 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .incubationAdContainer {
+        width: 100%;
+        height: 100vh;
+        float: left;
+        background: url('/static/images/incubation/incubation_bg_p.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        background-attachment: fixed;
+    }
+    .incubationAdBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 0 100px 0 100px;
+        .pageTitle {
+            font-size: 64px;
+            color: #fff;
+            margin-top: 26%;
+            font-weight: bold;
+        }
+        .pageSlogan {
+            font-size: 30px;
+            color: #fff;
+            margin-top: 40px;
+        }
+        .joinBtn {
+            display: inline-block;
+            padding: 0 40px 0 40px;
+            height: 60px;
+            border-radius: 30px;
+            background: $primary-yellow-color;
+            color: #fff;
+            line-height: 60px;
+            font-size: 28px;
+            margin-top: 60px;
+            &:hover {
+                background: #F6C885;
+            }
+        }
+    }
+    .centerContainer {
+        width: 100%;
+        float: left;
+        position: relative;
+        background: #f0f0f0 url('/static/images/partner_bg.png') no-repeat top center;
+        background-size: cover;
+        z-index: -1;
+        background-attachment: fixed;
+        .centerBox {
+            max-width: $content-max-width;
+            padding: 120px 100px 60px 100px;
+            margin: 0 auto;
+        }
+        .centerTitle {
+            font-size: 48px;
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .centerDesc {
+            font-size: 18px;
+            color: #3c3c3c;
+            margin-top: 34px;
+            text-align: justify;
+        }
+        .videoContainer {
+            max-width: 100%;
+            width: 730px;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 32px;
+            video {
+                width: 100%;
+            }
+        }
+    }
+    .aboutIncubationContainer {
+        width: 100%;
+        float: left;
+        background: $primary-yellow-color;
+        position: relative;
+        .aboutIncubationBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            padding: 90px 50px 90px 50px;
+        }
+        .aboutIncubationTitle {
+            font-size: 44px;
+            color: #fff;
+            text-align: center;
+        }
+        .learnMore {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .triangleDown {
+            width: 0;
+            height: 0;
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-top: 60px solid $primary-yellow-color;
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            margin-left: -75px;
+            z-index: 2;
+        }
+    }
+    .stepNumber {
+        font-size: 72px;
+        color: $primary-yellow-color;
+        text-align: center;
+    }
+    .stepNumberBlack {
+        font-size: 72px;
+        color: #141414;
+        text-align: center;
+    }
+    .stepTitle {
+        font-size: 48px;
+        color: $primary-yellow-color;
+        text-align: center;
+        .primary {
+            color: $primary-yellow-color;
+        }
+        .white {
+            color: #fff;
+        }
+        .black {
+            color: #141414;
+        }
+    }
+    .howTextPrimary {
+        font-size: 18px;
+        text-align: center;
+        color: $primary-yellow-color;
+    }
+    .howTextWhite {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+    }
+    .stepOneContainer {
+        width: 100%;
+        float: left;
+        background: url('/static/images/incubation/mission_p.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        background-attachment: fixed;
+        position: relative;
+        .stepOneBox {
+            margin: 0 auto;
+            padding: 110px 60px 140px 60px;
+            max-width: $content-max-width;
+        }
+        .missionContent {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+    .stepTwoContainer {
+        width: 100%;
+        float: left;
+        background: #fff;
+        .stepTwoBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            padding: 60px;
+        }
+    }
+    .arrowProcessBox {
+        width: 100%;
+        margin-top: 60px;
+        .processIcon {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: 10px;
+        }
+        .processDesc {
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            margin-top: 4px;
+        }
+    }
+    $arrow-width: 16px;
+    $arrow-box-height: 180px;
+    $arrow-bg: $primary-yellow-color;
+    .arrowItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: $arrow-box-height;
+        padding-right: $arrow-width;
+        position: relative;
+        .arrowBg {
+            width: 100%;
+            height: 100%;
+            padding: 10px (5px) 10px $arrow-width + 5px;
+            background: $arrow-bg;
+        }
+        .arrowContent {
+            width: 100%;
+            height: 100%;
+        }
+        .arrowL {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid $arrow-bg;
+            border-left: $arrow-width solid #fff;
+            border-bottom: $arrow-box-height/2 solid $arrow-bg;
+        }
+        .arrowR {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid #fff;
+            border-left: $arrow-width solid $arrow-bg;
+            border-bottom: $arrow-box-height/2 solid #fff;
+        }
+    } // .stepThreeBg {
+    //     width: 100%;
+    //     height: 200vh;
+    //     background: url('/static/images/incubation/selection_bg.png') no-repeat center center;
+    //     background-size: cover;
+    //     z-index: -1;
+    //     background-attachment: fixed;
+    // }
+    .stepThreeContainer {
+        background: url('/static/images/incubation/selection_bg.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        background-attachment: fixed;
+        width: 100%;
+        float: left;
+        padding-bottom: 150px;
+        position: relative;
+        .triangleRight {
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-left: 30px solid rgba(0, 0, 0, .5);
+            border-bottom: 30px solid transparent;
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            margin-top: -30px;
+        }
+        .triangleLeft {
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-right: 30px solid rgba(0, 0, 0, .5);
+            border-bottom: 30px solid transparent;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            margin-top: -30px;
+        }
+        .stepThreeBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            padding: 30px 0 30px 0;
+        }
+        .threeLargeBox {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+        }
+        .blackBox {
+            width: 100%;
+            background: rgba(0, 0, 0, .6);
+            padding: 40px 0 1px 0;
+        }
+        .blackRow {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        .textBox {
+            width: 65%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            p {
+                color: #fff;
+                font-size: 20px;
+                margin: 30px 0 30px 0;
+            }
+        }
+        .keyBox {
+            width: 35%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .requireKey2 {
+            display: none;
+        }
+        .requireKey {
+            padding-left: 60px;
+            padding-right: 30px;
+            .keyStyle {
+                margin-top: 85px;
+                font-size: 30px;
+                .keyPrimary {
+                    color: $primary-yellow-color;
+                }
+                .keyWhite {
+                    color: #fff;
+                }
+            }
+        }
+        .requireBox {
+            background: rgba(0, 0, 0, .5);
+            padding: 10px 200px 10px 30px;
+            background: rgba(0, 0, 0, .5);
+            text-align: right;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                padding: 30px;
+            }
+        }
+        .restrictionKey {
+            padding-left: 30px;
+            padding-right: 60px;
+            .keyStyle {
+                text-align: right;
+                margin-top: 85px;
+                font-size: 30px;
+                .keyPrimary {
+                    color: $primary-yellow-color;
+                }
+                .keyWhite {
+                    color: #fff;
+                }
+            }
+        }
+        .restrictionBox {
+            background: rgba(0, 0, 0, .5);
+            padding: 10px 30px 10px 200px;
+            background: rgba(0, 0, 0, .5);
+            text-align: left;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                padding: 30px;
+            }
+        }
+    }
+    .stepFourContainer {
+        padding-top: 40px;
+        width: 100%;
+        float: left;
+        background: url('/static/images/incubation/support_bg.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        background-attachment: fixed;
+        .stepFourBox {
+            margin: 0 auto;
+            max-width: $content-max-width;
+        }
+        .supportImageContainer {
+            margin-top: 30px;
+            width: 100%;
+            background: rgba(23, 45, 59, .65);
+        }
+        .supportP {
+            display: block;
+        }
+        .supportM {
+            display: none;
+        }
+        .supportImage {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            position: relative;
+            img {
+                padding: 80px 80px 80px 80px;
+                position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .supportImagePadding {
+            padding-top: 45%;
+        }
+        .leftBox {
+            width: 50%;
+            float: left;
+        }
+        .rightBox {
+            width: 50%;
+            float: left;
+            padding-left: 50px;
+            padding-right: 10px;
+        }
+        .topBox {
+            width: 100%;
+            height: 100px;
+            margin-top: 40px;
+        }
+        .supportMechanismTitle {
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+        }
+        .supportMechanismDesc {
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+        .supportMechanismListBox {
+            width: 100%;
+            margin-top: 40px;
+        }
+        .mechanismItemBox {
+            width: 100%;
+            float: left;
+            padding: 10px;
+        }
+        .mechanismItem {
+            width: 100%;
+            background: rgba(0, 0, 0, .3);
+            padding: 30px;
+            height: 460px;
+            position: relative;
+            &:hover {
+                background: #fff;
+                .mechanismItemTitle {
+                    color: #4a4a4a;
+                }
+            }
+        }
+        .mechanismTitleBox {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            border-bottom: 1px solid $primary-yellow-color;
+        }
+        .mechanismItemTitle {
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+        }
+        .mechanismItemTag {
+            font-size: 20px;
+            color: #9b9b9b;
+            margin-top: 10px;
+        }
+        .mechanismItemIcon {
+            width: 75px;
+            height: 75px;
+            background: url('/static/images/incubation/smile.png') no-repeat right bottom;
+            background-size: contain;
+            float: right;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .incentiveBox {
+            width: 100%;
+            margin-top: 40px;
+        }
+        .incentiveItem {
+            padding: 44px;
+            background: $primary-yellow-color;
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .incentiveIcon {
+            width: 64px;
+            height: 64px;
+            position: relative;
+            left: 50%;
+            margin-left: -32px;
+        }
+        .incentiveDesc {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-top: 35px;
+        }
+    }
+    .stepFiveContainer {
+        width: 100%;
+        float: left;
+        padding-top: 60px;
+        padding-bottom: 100px;
+        .stepFiveBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+        }
+        .processImageBox {
+            width: 100%;
+            margin-top: 40px;
+            position: relative;
+            img {
+                width: 54%;
+                margin-left: 23%;
+            }
+        }
+        .processItem {
+            position: absolute;
+            width: 23%;
+            padding: 10px;
+        }
+        .processItemTitle {
+            font-size: 36px;
+            color: $primary-yellow-color;
+        }
+        .processItemDesc {
+            font-size: 18px;
+            color: #3e3e3e;
+            margin-top: 8px;
+        }
+        .processItemPosition1 {
+            top: 4%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition2 {
+            top: 10%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition3 {
+            top: 22%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition4 {
+            top: 26%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition5 {
+            top: 40%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition6 {
+            top: 50%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition7 {
+            top: 60%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition8 {
+            top: 72%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition9 {
+            top: 84%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition10 {
+            top: 94%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {
+    .incubationAdBox {
+        .joinBtn {
+            padding: 0 80px 0 80px;
+        }
+    }
+    $arrow-width: 40px;
+    $arrow-box-height: 170px;
+    $arrow-bg: $primary-yellow-color;
+    .arrowItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: $arrow-box-height;
+        padding-right: $arrow-width;
+        position: relative;
+        .arrowBg {
+            width: 100%;
+            height: 100%;
+            padding: 10px (5px) 10px $arrow-width + 5px;
+            background: $arrow-bg;
+        }
+        .arrowContent {
+            width: 100%;
+            height: 100%;
+        }
+        .arrowL {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid $arrow-bg;
+            border-left: $arrow-width solid #fff;
+            border-bottom: $arrow-box-height/2 solid $arrow-bg;
+        }
+        .arrowR {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid #fff;
+            border-left: $arrow-width solid $arrow-bg;
+            border-bottom: $arrow-box-height/2 solid #fff;
+        }
+    }
+    .stepThreeContainer {
+        .requireKey {
+            .keyStyle {
+                font-size: 40px;
+            }
+        }
+        .restrictionKey {
+            .keyStyle {
+                font-size: 40px;
+            }
+        }
+    }
+    .stepFourContainer {
+        .mechanismItemBox {
+            width: 50%;
+            float: left;
+            padding: 10px;
+        }
+        .mechanismTitleBox {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            border-bottom: 1px solid $primary-yellow-color;
+        }
+        .leftBox {
+            width: 55%;
+            float: left;
+        }
+        .rightBox {
+            width: 45%;
+            float: left;
+        }
+    }
+}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {
+    $arrow-width: 40px;
+    $arrow-box-height: 170px;
+    $arrow-bg: $primary-yellow-color;
+    .arrowItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: $arrow-box-height;
+        padding-right: $arrow-width;
+        position: relative;
+        .arrowBg {
+            width: 100%;
+            height: 100%;
+            padding: 10px (5px) 10px $arrow-width + 5px;
+            background: $arrow-bg;
+        }
+        .arrowContent {
+            width: 100%;
+            height: 100%;
+        }
+        .arrowL {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid $arrow-bg;
+            border-left: $arrow-width solid #fff;
+            border-bottom: $arrow-box-height/2 solid $arrow-bg;
+        }
+        .arrowR {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: $arrow-box-height/2 solid #fff;
+            border-left: $arrow-width solid $arrow-bg;
+            border-bottom: $arrow-box-height/2 solid #fff;
+        }
+    }
+    .stepThreeContainer {
+        .textBox {
+            p {
+                color: #fff;
+                font-size: 20px;
+                padding: 30px 0 30px 0;
+                margin: 10px 0 20px 0;
+            }
+        }
+        .requireBox {
+            padding: 10px 280px 10px 30px;
+            img {
+                padding: 40px;
+            }
+        }
+        .restrictionBox {
+            padding: 10px 30px 10px 280px;
+            img {
+                padding: 40px;
+            }
+        }
+    }
+}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .incubationAdContainer {
+        width: 100%;
+        height: 100vh;
+        float: left;
+        background: url('/static/images/incubation/incubation_bg_m.png') no-repeat center center;
+        background-size: cover;
+    }
+    .incubationAdBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        @include px2rem('padding',
+        0 100px 0 100px);
+        .pageTitle {
+            font-size: px2rem(64px);
+            color: #fff;
+            margin-top: 30vh;
+            font-weight: bold;
+        }
+        .pageSlogan {
+            font-size: px2rem(30px);
+            color: #fff;
+            margin-top: px2rem(40px);
+        }
+        .joinBtn {
+            display: inline-block;
+            @include px2rem('padding',
+            0 40px 0 40px);
+            height: px2rem(60px);
+            border-radius: px2rem(30px);
+            background: $primary-yellow-color;
+            color: #fff;
+            line-height: px2rem(60px);
+            font-size: px2rem(28px);
+            margin-top: px2rem(80px);
+        }
+    }
+    .centerContainer {
+        width: 100%;
+        float: left;
+        background: #f0f0f0;
+        .centerBox {
+            width: 100%;
+            @include px2rem('padding',
+            80px 50px 80px 50px);
+        }
+        .centerTitle {
+            font-size: px2rem(48px);
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .centerDesc {
+            font-size: px2rem(24px);
+            color: #3c3c3c;
+            margin-top: px2rem(34px);
+            text-align: justify;
+        }
+        .videoContainer {
+            max-width: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin-top: px2rem(32px);
+            video {
+                width: 100%;
+            }
+        }
+    }
+    .aboutIncubationContainer {
+        width: 100%;
+        float: left;
+        background: $primary-yellow-color;
+        position: relative;
+        .aboutIncubationBox {
+            width: 100%;
+            padding: px2rem(50px);
+        }
+        .aboutIncubationTitle {
+            font-size: px2rem(44px);
+            color: #fff;
+            text-align: center;
+        }
+        .learnMore {
+            font-size: px2rem(24px);
+            color: #fff;
+            text-align: center;
+            margin-top: px2rem(28px);
+        }
+        .triangleDown {
+            width: 0;
+            height: 0;
+            border-left: px2rem(75px) solid transparent;
+            border-right: px2rem(75px) solid transparent;
+            border-top: px2rem(60px) solid $primary-yellow-color;
+            position: absolute;
+            bottom: px2rem(-60px);
+            left: 50%;
+            margin-left: px2rem(-75px);
+            z-index: 2;
+        }
+    }
+    .stepNumber {
+        font-size: px2rem(72px);
+        color: $primary-yellow-color;
+        text-align: center;
+    }
+    .stepNumberBlack {
+        font-size: px2rem(72px);
+        color: #141414;
+        text-align: center;
+    }
+    .stepTitle {
+        font-size: px2rem(48px);
+        color: $primary-yellow-color;
+        text-align: center;
+        .primary {
+            color: $primary-yellow-color;
+        }
+        .white {
+            color: #fff;
+        }
+        .black {
+            color: #141414;
+        }
+    }
+    .howTextPrimary {
+        font-size: px2rem(18px);
+        text-align: center;
+        color: $primary-yellow-color;
+    }
+    .howTextWhite {
+        font-size: px2rem(18px);
+        text-align: center;
+        color: #fff;
+    }
+    .stepOneContainer {
+        width: 100%;
+        float: left;
+        background: url('/static/images/incubation/mission_m.png') no-repeat center center;
+        background-size: cover;
+        .stepOneBox {
+            width: 100%;
+            @include px2rem('padding',
+            100px 50px 100px 50px);
+        }
+        .missionContent {
+            font-size: px2rem(20px);
+            color: #fff;
+            text-align: center;
+            margin-top: px2rem(40px);
+        }
+    }
+    .stepTwoContainer {
+        width: 100%;
+        float: left;
+        background: #fff;
+        .stepTwoBox {
+            width: 100%;
+            padding: px2rem(50px);
+        }
+    }
+    .arrowProcessBox {
+        width: 100%;
+        margin-top: px2rem(60px);
+        .processIcon {
+            width: px2rem(50px);
+            height: px2rem(50px);
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            margin-left: px2rem(-25px);
+            margin-top: px2rem(10px);
+        }
+        .processDesc {
+            font-size: px2rem(18px);
+            color: #fff;
+            text-align: center;
+            margin-top: px2rem(4px);
+        }
+    }
+    $arrow-width: 16px;
+    $arrow-box-height: 240px;
+    $arrow-bg: $primary-yellow-color;
+    .arrowItem {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: px2rem($arrow-box-height);
+        padding-right: px2rem($arrow-width);
+        position: relative;
+        .arrowBg {
+            width: 100%;
+            height: 100%;
+            @include px2rem('padding',
+            10px 5px 10px $arrow-width+5px);
+            background: $arrow-bg;
+        }
+        .arrowContent {
+            width: 100%;
+            height: 100%;
+        }
+        .arrowL {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: px2rem($arrow-box-height/2) solid $arrow-bg;
+            border-left: px2rem($arrow-width) solid #fff;
+            border-bottom: px2rem($arrow-box-height/2) solid $arrow-bg;
+        }
+        .arrowR {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: px2rem($arrow-box-height/2) solid #fff;
+            border-left: px2rem($arrow-width) solid $arrow-bg;
+            border-bottom: px2rem($arrow-box-height/2) solid #fff;
+        }
+    }
+    .stepThreeContainer {
+        width: 100%;
+        float: left;
+        background: $primary-yellow-color;
+        background-size: cover;
+        padding-bottom: px2rem(100px);
+        .triangleRight {
+            width: 0;
+            height: 0;
+            border-left: px2rem(30px) solid transparent;
+            border-bottom: px2rem(30px) solid rgba(0, 0, 0, .5);
+            border-right: px2rem(30px) solid transparent;
+            position: absolute;
+            top: px2rem(-30px);
+            left: 50%;
+            margin-left: px2rem(-30px);
+        }
+        .triangleLeft {
+            width: 0;
+            height: 0;
+            border-left: px2rem(30px) solid transparent;
+            border-bottom: px2rem(30px) solid rgba(0, 0, 0, .5);
+            border-right: px2rem(30px) solid transparent;
+            position: absolute;
+            top: px2rem(-30px);
+            left: 50%;
+            margin-left: px2rem(-30px);
+        }
+        .stepThreeBox {
+            width: 100%;
+            padding: px2rem(50px);
+        }
+        .blackBox {
+            width: 100%;
+            background: rgba(0, 0, 0, .6);
+            @include px2rem('padding',
+            40px 0 1px 0);
+        }
+        .blackRow {
+            width: 100%;
+            margin-bottom: px2rem(40px);
+        }
+        .textBox {
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            p {
+                color: #fff;
+                font-size: px2rem(20px);
+                @include px2rem('margin',
+                30px 0 30px 0);
+            }
+        }
+        .keyBox {
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .requireKey {
+            display: none;
+        }
+        .requireKey2 {
+            .keyStyle {
+                text-align: center;
+                font-size: px2rem(40px);
+                padding-bottom: px2rem(60px);
+                .keyPrimary {
+                    color: $primary-yellow-color;
+                }
+                .keyWhite {
+                    color: #fff;
+                }
+            }
+        }
+        .requireBox {
+            background: rgba(0, 0, 0, .5);
+            @include px2rem('padding',
+            10px 200px 10px 30px);
+            background: rgba(0, 0, 0, .5);
+            text-align: right;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                padding: px2rem(30px);
+            }
+        }
+        .restrictionKey {
+            .keyStyle {
+                text-align: center;
+                font-size: px2rem(40px);
+                padding-bottom: px2rem(60px);
+                .keyPrimary {
+                    color: $primary-yellow-color;
+                }
+                .keyWhite {
+                    color: #fff;
+                }
+            }
+        }
+        .restrictionBox {
+            background: rgba(0, 0, 0, .5);
+            @include px2rem('padding',
+            10px 30px 10px 200px);
+            background: rgba(0, 0, 0, .5);
+            text-align: left;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                padding: px2rem(30px);
+            }
+        }
+    }
+    .stepFourContainer {
+        width: 100%;
+        float: left;
+        background: #7c7c7c;
+        background-size: cover;
+        .stepFourBox {
+            width: 100%;
+            padding: px2rem(50px);
+        }
+        .supportImageContainer {
+            width: 100%;
+            background: rgba(23, 45, 59, .65);
+        }
+        .supportImage {
+            width: 100%;
+            position: relative;
+            img {
+                @include px2rem('padding',
+                80px 80px 80px 80px);
+                position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .supportP {
+            display: none;
+        }
+        .supportM {
+            display: block;
+        }
+        .supportImagePadding {
+            padding-top: 170%;
+        }
+        .leftBox {
+            width: 100%;
+            float: left;
+        }
+        .rightBox {
+            width: 100%;
+            float: left;
+            padding: px2rem(40px);
+        }
+        .topBox {
+            width: 100%;
+        }
+        .supportMechanismTitle {
+            font-size: px2rem(36px);
+            color: #fff;
+            text-align: center;
+        }
+        .supportMechanismDesc {
+            font-size: px2rem(20px);
+            color: #fff;
+            text-align: center;
+        }
+        .supportMechanismListBox {
+            width: 100%;
+            margin-top: px2rem(40px);
+        }
+        .mechanismItemBox {
+            width: 50%;
+            float: left;
+            padding: px2rem(10px);
+        }
+        .mechanismItem {
+            width: 100%;
+            background: rgba(0, 0, 0, .3);
+            padding: px2rem(30px);
+            height: px2rem(460px);
+            position: relative;
+            &:hover {
+                background: #fff;
+                .mechanismItemTitle {
+                    color: #4a4a4a;
+                }
+            }
+        }
+        .mechanismTitleBox {
+            position: relative;
+            width: 100%;
+            height: px2rem(60px);
+            overflow: hidden;
+            @include px2px('border-bottom',
+            1px solid $primary-yellow-color);
+        }
+        .mechanismItemTitle {
+            font-size: px2rem(30px);
+            color: #fff;
+            position: absolute;
+            bottom: px2rem(10px);
+        }
+        .mechanismItemTag {
+            font-size: px2rem(20px);
+            color: #9b9b9b;
+            margin-top: px2rem(10px);
+        }
+        .mechanismItemIcon {
+            width: px2rem(75px);
+            height: px2rem(75px);
+            background: url('/static/images/incubation/smile.png') no-repeat right bottom;
+            background-size: contain;
+            float: right;
+            position: absolute;
+            bottom: px2rem(20px);
+            right: px2rem(20px);
+        }
+        .incentiveBox {
+            width: 100%;
+            margin-top: px2rem(40px);
+        }
+        .incentiveItem {
+            padding: px2rem(44px);
+            background: $primary-yellow-color;
+            margin-top: px2rem(10px);
+            float: left;
+            width: 100%;
+            margin-bottom: px2rem(30px);
+        }
+        .incentiveIcon {
+            width: px2rem(64px);
+            height: px2rem(64px);
+            position: relative;
+            left: 50%;
+            margin-left: px2rem(-32px);
+        }
+        .incentiveDesc {
+            font-size: px2rem(24px);
+            color: #fff;
+            text-align: center;
+            margin-top: px2rem(35px);
+        }
+    }
+    .stepFiveContainer {
+        width: 100%;
+        float: left;
+        padding-top: px2rem(60px);
+        padding-bottom: px2rem(100px);
+        .stepFiveBox {
+            width: 100%;
+        }
+        .processImageBox {
+            width: 100%;
+            margin-top: px2rem(40px);
+            position: relative;
+            img {
+                width: 60%;
+                margin-left: 20%;
+            }
+        }
+        .processItem {
+            position: absolute;
+            width: 20%;
+            @include px2rem('padding',
+            0 50px 0 50px);
+            overflow: hidden;
+        }
+        .processItemTitle {
+            font-size: px2rem(30px);
+            color: $primary-yellow-color;
+        }
+        .processItemDesc {
+            display: none;
+            font-size: 18px;
+            color: #3e3e3e;
+            margin-top: 8px;
+        }
+        .processItemPosition1 {
+            top: 4%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition2 {
+            top: 14%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition3 {
+            top: 22%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition4 {
+            top: 30%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition5 {
+            top: 40%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition6 {
+            top: 50%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition7 {
+            top: 60%;
+            left: 0;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition8 {
+            top: 72%;
+            right: 0;
+            p {
+                text-align: left;
+            }
+        }
+        .processItemPosition9 {
+            top: 84%;
+            left: 0;
+            width: 30%;
+            p {
+                text-align: right;
+            }
+        }
+        .processItemPosition10 {
+            top: 94%;
+            right: 0;
+            width: 30%;
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.processIcon1 {
+    background: url('/static/images/incubation/p1.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+.processIcon2 {
+    background: url('/static/images/incubation/p2.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+.processIcon3 {
+    background: url('/static/images/incubation/p3.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+.processIcon4 {
+    background: url('/static/images/incubation/p4.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+.processIcon5 {
+    background: url('/static/images/incubation/p5.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+.incentiveIcon1 {
+    background: url('/static/images/incubation/i1.png') no-repeat center center;
+    background-size: contain;
+}
+
+.incentiveIcon2 {
+    background: url('/static/images/incubation/i2.png') no-repeat center center;
+    background-size: contain;
+}
+
+.incentiveIcon3 {
+    background: url('/static/images/incubation/i3.png') no-repeat center center;
+    background-size: contain;
+}

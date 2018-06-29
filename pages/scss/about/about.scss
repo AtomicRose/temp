@@ -1,0 +1,27 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .aboutPage {
+        width: 100%;
+    }
+}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {
+    .aboutPage {
+        width: 100%;
+    }
+}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css

@@ -1,0 +1,127 @@
+@import "../include-media.scss";
+@import "../fn.scss";
+$pagination-height-p: 30px;
+$pagination-height-m: 40px;
+// desktop css
+@include media('>tablet', 'screen') {
+    .pagination {
+        display: inline-block;
+        width: 100%;
+        height: $pagination-height-p;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: $pagination-height-p;
+            height: $pagination-height-p;
+            line-height: $pagination-height-p;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 2px;
+            margin: 0 10px 0 10px;
+        }
+        .special {
+            display: inline-block;
+            vertical-align: middle;
+            width: $pagination-height-p * 1.5;
+            height: $pagination-height-p;
+            line-height: $pagination-height-p;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 2px;
+            margin: 0 10px 0 10px;
+            &:hover {
+                background: rgba(255, 172, 50, .6);
+                color: #fff;
+            }
+        }
+    }
+    .page {
+        &:hover {
+            background: rgba(255, 172, 50, .6);
+            color: #fff;
+        }
+    }
+    .prev {
+        background: url('/static/images/common/prev_gray.png') no-repeat center center;
+        background-size: 13.8px 23.8px;
+        &:hover {
+            background: url('/static/images/common/prev_yellow.png') no-repeat center center;
+        }
+    }
+    .next {
+        background: url('/static/images/common/next_gray.png') no-repeat center center;
+        background-size: 13.8px 23.8px;
+        &:hover {
+            background: url('/static/images/common/next_yellow.png') no-repeat center center;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .pagination {
+        display: inline-block;
+        width: 100%;
+        height: px2rem($pagination-height-m);
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: px2rem($pagination-height-m);
+            height: px2rem($pagination-height-m);
+            line-height: px2rem($pagination-height-m);
+            font-size: px2rem(20px);
+            text-align: center;
+            border-radius: px2rem(4px);
+            @include px2rem('margin',
+            0 8px 0 8px);
+        }
+        .special {
+            display: inline-block;
+            vertical-align: middle;
+            width: px2rem($pagination-height-m * 1.5);
+            height: px2rem($pagination-height-m);
+            line-height: px2rem($pagination-height-m);
+            font-size: px2rem(20px);
+            text-align: center;
+            border-radius: px2rem(4px);
+            @include px2rem('margin',
+            0 8px 0 8px);
+        }
+    }
+    .prev {
+        background: url('/static/images/common/prev_gray.png') no-repeat center center;
+        background-size: px2rem(17.7px) px2rem(31.7px);
+        &:hover {
+            background: url('/static/images/common/prev_yellow.png') no-repeat center center;
+        }
+    }
+    .next {
+        background: url('/static/images/common/next_gray.png') no-repeat center center;
+        background-size: px2rem(17.7px) px2rem(31.7px);
+        &:hover {
+            background: url('/static/images/common/next_yellow.png') no-repeat center center;
+        }
+    }
+    .page {}
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.pageActive {
+    background: rgba(255, 172, 50, 1);
+    color: #fff;
+}

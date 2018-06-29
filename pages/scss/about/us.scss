@@ -1,0 +1,738 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .aboutContainer {
+        width: 100%;
+        background: #f0f0f0;
+    }
+    .aboutBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 60px 200px 130px 200px;
+        .aboutTitle {
+            font-size: 44px;
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .aboutText {
+            font-size: 18px;
+            color: #303030;
+            text-align: justify;
+            margin-top: 40px;
+        }
+    }
+    .partnerLineM {
+        display: none;
+    }
+    .partnerLineP {
+        display: block;
+        width: 100%;
+        padding: 0 4% 0 4%;
+        hr {
+            border-style: dashed;
+            border-width: 1px;
+            border-color: #d6d6d6;
+        }
+    }
+    .imgWallContainer {
+        width: 100%;
+        background: #141414;
+        position: relative;
+        .imgWallTopBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px; // z-index: -1;
+            background: #f0f0f0;
+        }
+        .imgWallBottomBg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px; // z-index: -1;
+            background: #f0f0f0;
+        }
+        .imgWallMax {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            position: relative;
+            .imgWallPadding {
+                // padding-top: 57%;
+            }
+        }
+        .imgWallBox_p {
+            display: block;
+            width: 100%;
+            padding: 0 75px 0 75px;
+        }
+        .imgWallBox_m {
+            display: none;
+        }
+        .r1,
+        .r2 {
+            width: 100%;
+        }
+        .r1_c1,
+        .r1_c3 {
+            width: 22.54%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .r1_c2 {
+            width: 54.92%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .r2_c1 {
+            width: 50.29%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .r2_c2 {
+            width: 49.71%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .r2_c1_r1 {
+            width: 100%;
+            .r2_c1_r1_c1 {
+                width: 44.8%;
+                display: inline-block;
+                vertical-align: top;
+            }
+            .r2_c1_r1_c2 {
+                width: 55.2%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        .r2_c1_r2 {
+            width: 100%;
+        }
+        .r2_c2_r1 {
+            width: 100%;
+        }
+        .r2_c2_r2 {
+            width: 100%;
+            .r2_c2_r2_c1 {
+                width: 55.2%;
+                display: inline-block;
+                vertical-align: top;
+            }
+            .r2_c2_r2_c2 {
+                width: 44.8%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    }
+    .specialText {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        p {
+            text-align: right !important;
+        }
+    }
+    .boxTitle {
+        font-size: 28px !important;
+    }
+    .pbox {
+        width: 100%;
+        height: 100%;
+        padding: 3px;
+        background: #fff;
+    }
+    .wall_smallBox {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        padding: 3px;
+        .wall_smallBox_p {
+            padding-top: 69.23%;
+        }
+        .wall_smallBox_p2 {
+            padding-top: 74.36%;
+        }
+        .wall_smallBox_p3 {
+            padding-top: 60.1%;
+        }
+        .wall_smallBox_p4 {
+            padding-top: 67.24%;
+        }
+        .wall_smallBox_p5 {
+            padding-top: 62.25%;
+        }
+        .wall_smallBox_p6 {
+            padding-top: 77.2%;
+        }
+        .wall_smallBox_c {
+            position: absolute;
+            padding: 3px;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            p {
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                padding: 0 5px 0 5px;
+                line-height: 16px;
+            }
+        }
+        p {
+            display: none;
+        }
+        &:hover {
+            p {
+                display: block;
+            }
+        }
+    }
+    .wall_office {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        padding: 3px;
+        .wall_office_p {
+            padding-top: 57.2%;
+            background: url('/static/images/about/office_bg.png') no-repeat center;
+            background-size: cover;
+        }
+        .wall_office_c {
+            position: absolute;
+            padding: 3px;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+    }
+    .partners {
+        width: 100%;
+        background: #f0f0f0;
+        padding-top: 50px;
+        padding-bottom: 80px;
+        .partnersTitle {
+            font-size: 44px;
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .partnersDesc {
+            font-size: 20px;
+            color: #3c3c3c;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .iconBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            padding: 0 80px 0 80px;
+            margin-top: 64px;
+        }
+        .iconBg {
+            background: #fff;
+            width: 100%;
+        }
+        .iconItem {
+            width: 20%;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            p {
+                text-align: center;
+                color: #2d2d2d;
+                font-size: 18px;
+            }
+            .iconPadding {
+                padding-top: 50%;
+            }
+            .iconBase {
+                width: 60%;
+                height: 60%;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+            }
+        }
+        .iconItem_2 {
+            width: 20%;
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {
+    .pbox {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+    .imgWallContainer {
+        width: 100%;
+        background: #141414;
+        position: relative;
+        .imgWallMax {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            position: relative;
+            .imgWallPadding {
+                // padding-top: 64%;
+            }
+        }
+        .imgWallTopBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px; // z-index: -1;
+            background: #f0f0f0;
+        }
+        .imgWallBottomBg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 90px; // z-index: -1;
+            background: #f0f0f0;
+        }
+        .imgWallBox_p {
+            display: block;
+            width: 100%;
+            padding: 0 75px 0 75px;
+        }
+    }
+    .wall_smallBox {
+        padding: 5px;
+        .wall_smallBox_c {
+            padding: 5px;
+            p {
+                font-size: 20px;
+                padding: 0 5px 0 5px;
+                line-height: 24px;
+            }
+        }
+    }
+    .wall_office {
+        padding: 5px;
+        .wall_office_c {
+            padding: 5px;
+        }
+    }
+    .boxTitle {
+        font-size: 38px !important;
+    }
+    .partners {
+        padding-top: 80px;
+        .iconItem {
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+} // xlarge desktop css
+@include media('>bigDesktop',
+'screen') {
+    .pbox {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+    .imgWallContainer {
+        width: 100%;
+        background: #141414;
+        position: relative;
+        .imgWallMax {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            position: relative;
+            .imgWallPadding {
+                // padding-top: 64%;
+            }
+        }
+        .imgWallBox_p {
+            display: block;
+            width: 100%;
+            padding: 0 75px 0 75px;
+        }
+    }
+    .wall_smallBox {
+        padding: 5px;
+        .wall_smallBox_c {
+            padding: 5px;
+            p {
+                font-size: 26px;
+                padding: 0 5px 0 5px;
+                line-height: 30px;
+            }
+        }
+    }
+    .wall_office {
+        padding: 5px;
+        .wall_office_c {
+            padding: 5px;
+        }
+    }
+    .partners {
+        padding-top: 80px;
+    }
+} // mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .aboutContainer {
+        width: 100%;
+        background: #f0f0f0;
+    }
+    .aboutBox {
+        width: 100%;
+        @include px2rem('padding',
+        50px 50px 100px 50px);
+        .aboutTitle {
+            font-size: px2rem(44px);
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .aboutText {
+            font-size: px2rem(24px);
+            color: #303030;
+            text-align: justify;
+            margin-top: px2rem(20px);
+        }
+    }
+    .partnerLineM {
+        display: block;
+        width: 100%;
+        padding: 0 4px 0 4px;
+        hr {
+            border-style: dashed;
+            border-width: px2px(1px);
+            border-color: #d6d6d6;
+        }
+    }
+    .partnerLineP {
+        display: none;
+    }
+    .imgWallContainer {
+        width: 100%;
+        background: #141414;
+        position: relative;
+        .imgWallMax {
+            width: 100%;
+            position: relative;
+            .imgWallPadding {
+                padding-top: 308%;
+            }
+        }
+        .imgWallBox_p {
+            display: none;
+        }
+        .imgWallBox_m {
+            position: absolute;
+            top: px2rem(-40px);
+            left: 0;
+            width: 100%;
+            @include px2rem('padding',
+            0 50px 0 50px);
+            display: block;
+        }
+    }
+    .specialText {
+        position: absolute;
+        bottom: px2rem(20px);
+        right: px2rem(20px);
+        p {
+            text-align: right !important;
+        }
+    }
+    .boxTitle {
+        font-size: px2rem(44px) !important;
+    }
+    .pbox {
+        width: 100%;
+        height: 100%;
+        padding: px2rem(4px);
+        background: #fff;
+    }
+    .mRow {
+        width: 100%;
+        background: #fff;
+        .mBox1 {
+            width: 62.9%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .mBox2 {
+            width: 37.1%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    .wall_smallBox {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        padding: px2rem(4px);
+        .wall_smallBox_p {
+            padding-top: 69.23%;
+        }
+        .wall_smallBox_p2 {
+            padding-top: 119%;
+        }
+        .wall_smallBox_p3 {
+            padding-top: 60.1%;
+        }
+        .wall_smallBox_p4 {
+            padding-top: 67.24%;
+        }
+        .wall_smallBox_p5 {
+            padding-top: 62.25%;
+        }
+        .wall_smallBox_p6 {
+            padding-top: 77.2%;
+        }
+        .wall_smallBox_c {
+            position: absolute;
+            padding: px2rem(4px);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            p {
+                font-size: px2rem(28px);
+                text-align: center;
+                color: #fff;
+                @include px2rem('padding',
+                0 5px 20px 5px);
+                line-height: px2rem(30px);
+            }
+        }
+    }
+    .wall_office {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        padding: px2rem(4px);
+        .wall_office_p {
+            padding-top: 57.2%;
+            background: url('/static/images/about/office_bg.png') no-repeat center;
+            background-size: cover;
+        }
+        .wall_office_c {
+            position: absolute;
+            padding: px2rem(4px);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+    }
+    .partners {
+        width: 100%;
+        background: #f0f0f0;
+        padding-top: px2rem(80px);
+        padding-bottom: px2rem(80px);
+        .partnersTitle {
+            font-size: px2rem(44px);
+            color: $primary-yellow-color;
+            text-align: center;
+            font-weight: bold;
+        }
+        .partnersDesc {
+            font-size: px2rem(20px);
+            color: #3c3c3c;
+            text-align: center;
+            @include px2rem('padding',
+            20px 20px 0 20px);
+        }
+        .iconBox {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            @include px2rem('padding',
+            0 50px 10px 50px);
+            margin-top: px2rem(30px);
+        }
+        .iconBg {
+            background: #fff;
+            width: 100%;
+        }
+        .iconItem {
+            width: 33.3333%;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            p {
+                text-align: center;
+                color: #2d2d2d;
+                font-size: px2rem(24px);
+            }
+            .iconPadding {
+                padding-top: 60%;
+            }
+            .iconBase {
+                width: 60%;
+                height: 60%;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+            }
+        }
+        .iconItem_2 {
+            width: 66.6667%;
+            .iconPadding {
+                padding-top: 30%;
+            }
+        }
+    }
+} // small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.mid {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.wall_goal_p {
+    background: url('/static/images/about/goal_bg.png') no-repeat;
+    background-size: contain;
+}
+
+.wall_attitude_p {
+    background: #3b3b3b;
+}
+
+.wall_vision_p {
+    background: url('/static/images/about/vision_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_white1_p {
+    background: url('/static/images/about/white1_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_white2_p {
+    background: url('/static/images/about/white2_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_about_p {
+    background: $primary-yellow-color;
+}
+
+.wall_strategy_p {
+    background: url('/static/images/about/strategy_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_speech_p {
+    background: url('/static/images/about/speech.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_mission_p {
+    background: url('/static/images/about/mission_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.wall_coreValue_p {
+    background: #3b3b3b;
+}
+
+.icon1 {
+    background: url('/static/images/partner01_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner01.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon2 {
+    background: url('/static/images/partner02_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner02.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon3 {
+    background: url('/static/images/partner03_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner03.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon4 {
+    background: url('/static/images/partner04_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner04.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon5 {
+    background: url('/static/images/partner05_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner05.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon6 {
+    background: url('/static/images/partner06_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner06.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon7 {
+    background: url('/static/images/partner07_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner07.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon8 {
+    background: url('/static/images/partner08_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner08.png') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.icon9 {
+    background: url('/static/images/partner09_g.png') no-repeat center;
+    background-size: contain;
+    &:hover {
+        background: url('/static/images/partner09.png') no-repeat center;
+        background-size: contain;
+    }
+}

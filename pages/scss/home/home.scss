@@ -1,0 +1,812 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .videoContainer {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        video {
+            width: 100%;
+        }
+    }
+    .contentContainer {
+        width: 100%;
+    }
+    .officialPlayContainer {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .8);
+        position: relative;
+    }
+    .middle {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+    .middleBox {
+        position: absolute;
+        top: 40%;
+        padding: 0 150px;
+    }
+    .company {
+        span {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        .name {
+            font-size: 64px;
+            color: #fff;
+            margin-right: 48px;
+            font-weight: bold;
+        }
+        .slogan {
+            font-size: 36px;
+            color: #bbb;
+        }
+    }
+    .controller {
+        margin-top: 80px;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a {
+            margin-right: 30px;
+        }
+        .contactBtn {
+            // padding: 0 30px 0 30px;
+            width: 340px;
+            height: 60px;
+            background: $primary-yellow-color;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 28px;
+            line-height: 60px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+            transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+            &:hover {
+                background: #F6C885;
+                color: #fff;
+            }
+        }
+        .playBtn {
+            width: 60px;
+            height: 60px;
+            background: url('/static/images/play.png') no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                -webkit-animation: playBtnRotate .6s linear;
+                        animation: playBtnRotate .6s linear;
+            }
+        }
+    }
+    @-webkit-keyframes playBtnRotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+        25% {
+            -webkit-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+        }
+        50% {
+            -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+        }
+        75% {
+            -webkit-transform: rotate(-270deg);
+                    transform: rotate(-270deg);
+        }
+        100% {
+            -webkit-transform: rotate(-360deg);
+                    transform: rotate(-360deg);
+        }
+    }
+    @keyframes playBtnRotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+        25% {
+            -webkit-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+        }
+        50% {
+            -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+        }
+        75% {
+            -webkit-transform: rotate(-270deg);
+                    transform: rotate(-270deg);
+        }
+        100% {
+            -webkit-transform: rotate(-360deg);
+                    transform: rotate(-360deg);
+        }
+    }
+    .scrollPage {
+        position: absolute;
+        bottom: 60px;
+        width: 120px;
+        text-align: center;
+        left: 50%;
+        margin-left: -60px;
+        cursor: pointer;
+        p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, .5);
+            margin-bottom: 15px;
+        }
+        .scrollIcon {
+            width: 56px;
+            height: 53px;
+            background: url('/static/images/scrollDown.png') no-repeat;
+            background-size: contain;
+            display: inline-block;
+        }
+    }
+    .descContainer {
+        width: 100%;
+        background: #eee url('/static/images/aboutBg.png') no-repeat;
+        background-size: cover;
+    }
+    .descBox {
+        max-width: $content-max-width - 200px;
+        padding: 128px;
+        margin: 0 auto;
+        .descTitle {
+            font-size: 48px;
+            color: $primary-yellow-color;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        .desc {
+            font-size: 18px;
+            color: #3c3c3c;
+        }
+    }
+    .supportContainer {
+        width: 100%;
+        background: #141414 url('/static/images/supportBg.png') no-repeat;
+        background-size: cover;
+    }
+    .supportBox {
+        max-width: $content-max-width;
+        height: 800px;
+        padding: 224px 0 0 0;
+        margin: 0 auto;
+    }
+    .supportItem {
+        width: 33.333%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 0 50px 0 50px;
+        position: relative;
+        -webkit-transition: margin-top 0.5s ease-in-out;
+        transition: margin-top 0.5s ease-in-out;
+        .supportIcon {
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+        }
+        .iconPublishing {
+            background: url('/static/images/gamePublishing.png') no-repeat center center;
+            background-size: auto 100%;
+        }
+        .iconIncubation {
+            background: url('/static/images/gameIncubation.png') no-repeat center center;
+            background-size: auto 100%;
+        }
+        .iconInvestment {
+            background: url('/static/images/gameInvestment.png') no-repeat center center;
+            background-size: auto 70%;
+        }
+        .line {
+            width: 150px;
+            border-color: $primary-yellow-color;
+        }
+        .supportTitle {
+            font-size: 36px;
+            color: #fff;
+            margin-top: 56px;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        .supportDesc {
+            font-size: 18px;
+            color: #828282;
+            margin-top: 10px;
+        }
+        .jumpBtn {
+            opacity: 0;
+            display: inline-block;
+            width: 70%;
+            max-width: 300px;
+            height: 60px;
+            overflow: hidden;
+            background: url('/static/images/arrow-right.png') no-repeat;
+            background-size: 100%;
+            margin-top: 40px;
+            cursor: pointer;
+            -webkit-transition: margin-top 0.6s ease-in-out, opacity 0.5s ease-in-out;
+            transition: margin-top 0.6s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        &:hover {
+            margin-top: -20px;
+            .jumpBtn {
+                margin-top: 30px;
+                opacity: 1;
+            }
+        }
+    }
+    .advantageContainer {
+        width: 100%;
+        background: #f3f2f2 url('/static/images/advantageBg.png') no-repeat;
+        background-size: cover;
+        padding: 100px;
+    }
+    .advantageBox {
+        max-width: $content-max-width - 400;
+        height: 460px;
+        margin: 0 auto;
+        .advantageTitle {
+            text-align: center;
+            color: $primary-yellow-color;
+            font-size: 44px;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        .advantageItem {
+            width: 25%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageItem2 {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageItem3 {
+            width: 25%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageIcon {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+        }
+        .iconRegions {
+            background: url('/static/images/advantageRegions.png') no-repeat center center;
+        }
+        .iconPlayers {
+            background: url('/static/images/advantagePlayers.png') no-repeat center center;
+        }
+        .iconGames {
+            background: url('/static/images/advantageGames.png') no-repeat center center;
+        }
+        .number {
+            font-size: 40px;
+            font-weight: bold;
+            color: #141414;
+            margin-bottom: 10px;
+        }
+        .type {
+            font-size: 24px;
+            color: #969696;
+            text-align: center;
+        }
+    }
+    .gamesContainer {
+        width: 100%;
+        height: 1000px;
+        background: #141414 url('/static/images/supportBg.png') no-repeat;
+        background-size: cover;
+    }
+    .gamesBox {
+        max-width: $content-max-width;
+        position: relative;
+        margin: 0 auto;
+        .gameShow {
+            position: absolute;
+            top: -100px;
+            width: 100%;
+        }
+        .gameItem {
+            width: 50%;
+            padding: 10px;
+            display: inline-block;
+        }
+        .contentBg {
+            width: 100%;
+            background: #fff;
+            padding: 20px 24px 20px 24px;
+            float: left;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+            -webkit-transition: box-shadow 0.5s ease-in-out;
+            -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+            transition: -webkit-box-shadow 0.5s ease-in-out;
+            transition: box-shadow 0.5s ease-in-out;
+            transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+            .logo {
+                width: 100%;
+                height: 200px;
+                text-align: center;
+                padding: 20px 30px 20px 30px;
+                -webkit-transition: padding 0.5s ease-in-out;
+                transition: padding 0.5s ease-in-out;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            &:hover {
+                -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .3);
+                        box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .3);
+                .logo {
+                    padding: 10px 30px 10px 30px;
+                }
+            }
+        }
+        .name {
+            text-align: center;
+            font-size: 32px;
+            color: #000;
+        }
+        .type {
+            text-align: center;
+            font-size: 20px;
+            color: #000;
+        }
+        .desc {
+            display: block;
+            resize: none;
+            overflow: hidden;
+            width: 100%;
+            border: none;
+            padding: 20px 40px 20px 40px;
+            font-size: 14px;
+        }
+        .desc2 {
+            display: none;
+        }
+        .screenshots {
+            width: 100%;
+            text-align: center;
+            padding: 0 -30px 0 -30px;
+            float: left;
+            .imgBox {
+                display: inline-block;
+                max-width: 280px;
+                padding: 5px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .partnerContainer {
+        width: 100%;
+        background: #f0f0f0 url('/static/images/partner_bg.png') no-repeat top center;
+        background-size: cover;
+        padding-top: 100px;
+        height: 500px;
+    }
+    .partnerBox {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        .partnerTitle {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 44px;
+            color: $primary-yellow-color;
+            margin-bottom: 30px;
+        }
+        .homeSilder {
+            width: 100%;
+            height: 180px;
+            padding: 20px 40px 20px 40px;
+        }
+        .partnerItem {
+            width: 20%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            padding: 0 20px 30px 20px;
+            img {
+                max-width: 100%;
+                max-height: 100px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {
+    .screenshots {
+        .imgBox {
+            max-width: 50% !important;
+        }
+    }
+}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .videoContainer {
+        display: none;
+    }
+    .contentContainer {
+        width: 100%;
+    }
+    .officialPlayContainer {
+        width: 100%;
+        height: 100vh;
+        background: url('/static/images/homeAboutBg_m.png') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .middle {
+        width: 100%;
+    }
+    .middleBox {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        padding: 0 px2rem(50px);
+    }
+    .company {
+        span {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        .name {
+            display: block;
+            font-size: px2rem(56px);
+            color: #fff;
+            font-weight: bold;
+        }
+        .slogan {
+            display: block;
+            font-size: px2rem(36px);
+            color: #bbb;
+        }
+    }
+    .controller {
+        margin-top: px2rem(242px);
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .contactBtn {
+            display: block;
+            text-align: center;
+            width: px2rem(340px);
+            height: px2rem(80px);
+            background: $primary-yellow-color;
+            border-radius: px2rem(40px);
+            color: #fff;
+            font-size: px2rem(30px);
+            line-height: px2rem(80px);
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .playBtn {
+            display: none;
+        }
+    }
+    .scrollPage {
+        position: absolute;
+        bottom: px2rem(36px);
+        width: px2rem(120px);
+        text-align: center;
+        left: 50%;
+        margin-left: px2rem(-60px);
+        cursor: pointer;
+        p {
+            font-size: px2rem(20px);
+            color: rgba(255, 255, 255, .5);
+            margin-bottom: px2rem(15px);
+        }
+        .scrollIcon {
+            width: px2rem(56px);
+            height: px2rem(53px);
+            background: url('/static/images/scrollDown.png') no-repeat;
+            background-size: contain;
+            display: inline-block;
+        }
+    }
+    .descContainer {
+        width: 100%;
+        background: #eee url('/static/images/aboutBg.png') no-repeat;
+        background-size: cover;
+    }
+    .descBox {
+        width: 100%;
+        @include px2rem('padding',
+        50px 50px 80px 50px);
+        margin: 0 auto;
+        .descTitle {
+            font-size: px2rem(48px);
+            color: $primary-yellow-color;
+            text-align: center;
+            margin-bottom: px2rem(20px);
+            font-weight: bold;
+        }
+        .desc {
+            font-size: px2rem(24px);
+            color: #3c3c3c;
+        }
+    }
+    .supportContainer {
+        width: 100%;
+        background: #141414 url('/static/images/supportBg.png') no-repeat;
+        background-size: cover;
+    }
+    .supportBox {
+        width: 100%;
+        padding: px2rem(50px);
+    }
+    .supportItem {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: px2rem(40px) 0 px2rem(40px) 0;
+        position: relative;
+        -webkit-transition: margin-top 0.5s ease-in-out;
+        transition: margin-top 0.5s ease-in-out;
+        .supportIcon {
+            display: inline-block;
+            width: px2rem(180px);
+            height: px2rem(180px);
+        }
+        .iconPublishing {
+            background: url('/static/images/gamePublishing.png') no-repeat center center;
+            background-size: auto 100%;
+        }
+        .iconIncubation {
+            background: url('/static/images/gameIncubation.png') no-repeat center center;
+            background-size: auto 100%;
+        }
+        .iconInvestment {
+            background: url('/static/images/gameInvestment.png') no-repeat center center;
+            background-size: auto 70%;
+        }
+        .line {
+            width: px2rem(150px);
+            border-color: $primary-yellow-color;
+        }
+        .supportTitle {
+            font-size: px2rem(48px);
+            color: #fff;
+            margin-top: px2rem(20px);
+            margin-bottom: px2rem(4px);
+            font-weight: bold;
+        }
+        .supportDesc {
+            font-size: px2rem(24px);
+            color: #828282;
+            margin-top: px2rem(10px);
+        }
+        .jumpBtn {
+            opacity: 0.3;
+            display: inline-block;
+            width: px2rem(300px);
+            height: px2rem(60px);
+            overflow: hidden;
+            background: url('/static/images/arrow-right.png') no-repeat;
+            background-size: 100%;
+            margin-top: px2rem(40px);
+            cursor: pointer;
+            -webkit-transition: margin-top 0.6s ease-in-out, opacity 0.5s ease-in-out;
+            transition: margin-top 0.6s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        &:hover {
+            margin-top: px2rem(-20px);
+            .jumpBtn {
+                margin-top: px2rem(30px);
+                opacity: 1;
+            }
+        }
+    }
+    .advantageContainer {
+        width: 100%;
+        background: #f3f2f2 url('/static/images/advantageBg.png') no-repeat;
+        background-size: cover;
+        @include px2rem('padding',
+        100px 50px 260px 50px);
+    }
+    .advantageBox {
+        width: 100%;
+        .advantageTitle {
+            text-align: center;
+            color: $primary-yellow-color;
+            font-size: px2rem(44px);
+            margin-bottom: px2rem(50px);
+            font-weight: bold;
+        }
+        .advantageItem {
+            width: 25%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageItem2 {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageItem3 {
+            width: 25%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .advantageIcon {
+            width: px2rem(60px);
+            height: px2rem(60px);
+            display: inline-block;
+        }
+        .iconRegions {
+            background: url('/static/images/advantageRegions.png') no-repeat center center;
+            background-size: contain;
+        }
+        .iconPlayers {
+            background: url('/static/images/advantagePlayers.png') no-repeat center center;
+            background-size: contain;
+        }
+        .iconGames {
+            background: url('/static/images/advantageGames.png') no-repeat center center;
+            background-size: contain;
+        }
+        .number {
+            font-size: px2rem(30px);
+            font-weight: bold;
+            color: #141414;
+            margin-bottom: px2rem(20px);
+        }
+        .type {
+            font-size: px2rem(16px);
+            color: #969696;
+            text-align: center;
+        }
+    }
+    .gamesContainer {
+        width: 100%;
+        background: #141414 url('/static/images/supportBg.png') no-repeat;
+        background-size: cover;
+    }
+    .gamesBox {
+        width: 100%;
+        position: relative;
+        .gameShow {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+        }
+        .gameItem {
+            width: 100%;
+            @include px2rem('padding',
+            10px 40px 10px 40px);
+            display: inline-block;
+        }
+        .contentBg {
+            width: 100%;
+            background: #fff;
+            @include px2rem('padding',
+            20px 10px 20px 10px);
+            float: left;
+            -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+                    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+            .logo {
+                width: 100%;
+                height: px2rem(200px);
+                text-align: center;
+                @include px2rem('padding',
+                20px 30px 20px 30px);
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+        .name {
+            text-align: center;
+            font-size: px2rem(32px);
+            color: #000;
+        }
+        .type {
+            text-align: center;
+            font-size: px2rem(20px);
+            color: #000;
+        }
+        .desc {
+            display: none;
+        }
+        .desc2 {
+            display: block;
+            width: 100%;
+            border: none;
+            @include px2rem('padding',
+            20px 40px 20px 40px);
+            font-size: px2rem(16px);
+        }
+        .screenshots {
+            width: 100%;
+            text-align: center;
+            float: left;
+            .imgBox {
+                display: inline-block;
+                max-width: 50%;
+                padding: px2rem(10px);
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .partnerContainer {
+        width: 100%;
+        background: #f0f0f0 url('/static/images/partner_bg.png') no-repeat top center;
+        background-size: cover;
+        @include px2rem('padding',
+        100px 50px 140px 50px);
+    }
+    .partnerBox {
+        width: 100%;
+        background-size: cover;
+        .partnerTitle {
+            margin-top: px2rem(40px);
+            text-align: center;
+            font-size: px2rem(44px);
+            color: $primary-yellow-color;
+            margin-bottom: px2rem(30px);
+        }
+        .homeSilder {
+            width: 100%;
+            height: px2rem(240px);
+        }
+        .partnerItem {
+            width: 33.333%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            @include px2rem('padding',
+            0 20px 40px 20px);
+            overflow: hidden;
+            img {
+                max-width: 100%;
+                max-height: 100px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.homePage {
+    width: 100%;
+}

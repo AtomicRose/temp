@@ -1,0 +1,127 @@
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {
+    .newsLoading {
+        height: 40px;
+        border-radius: 4px;
+        background: #f9c77e;
+        color: #fff;
+        line-height: 40px;
+        padding: 0 20px 0 10px;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .loadIcon {
+        width: 40px;
+        height: 40px;
+        background: url('/static/images/common/loading.png') no-repeat center center;
+        background-size: 24px 24px; // transform: rotate(45deg);
+        -webkit-animation: loadMove .6s;
+                animation: loadMove .6s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+    .loadText {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+// large desktop css
+@include media('>desktop',
+'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop',
+'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet',
+'screen') {
+    .newsLoading {
+        height: px2rem(40px);
+        border-radius: px2rem(4px);
+        background: #f9c77e;
+        color: #fff;
+        line-height: px2rem(40px);
+        @include px2rem('padding', 0 20px 0 10px);
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .loadIcon {
+        width: px2rem(40px);
+        height: px2rem(40px);
+        background: url('/static/images/common/loading.png') no-repeat center center;
+        background-size: px2rem(24px) px2rem(24px); // transform: rotate(45deg);
+        -webkit-animation: loadMove .6s;
+                animation: loadMove .6s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+    .loadText {
+        font-size: px2rem(18px);
+        margin-left: px2rem(10px);
+    }
+}
+
+// small mobile css
+@include media('<=phone',
+'screen') {}
+
+// usually css
+.newsLoading {
+    display: inline-block;
+    overflow: hidden;
+}
+
+@keyframes loadMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+    }
+    75% {
+        -webkit-transform: rotate(-270deg);
+                transform: rotate(-270deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes loadMove {
+    /* Safari 和 Chrome */
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+    }
+    75% {
+        -webkit-transform: rotate(-270deg);
+                transform: rotate(-270deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
+}
